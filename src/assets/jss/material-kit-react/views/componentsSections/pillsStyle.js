@@ -10,6 +10,12 @@ const pillsStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none"
+  },
+  description: {
+    color: "#999"
+  },
+  courseTitle: {
+    fontWeight: "bold"
   }
 };
 

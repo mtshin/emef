@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+// react component plugin for creating datetime dropdown picker
+import Datetime from "react-datetime";
+
 // @material-ui/core components
+import FormControl from "@material-ui/core/FormControl";
+import InputLabel from "@material-ui/core/InputLabel";
 import { makeStyles } from "@material-ui/core/styles";
 
 // Snackbar notifications on submit
@@ -18,23 +23,23 @@ import emailjs from "emailjs-com";
 
 const useStyles = makeStyles(styles);
 
-export default function ClassEmailForm() {
+// eslint-disable-next-line react/prop-types
+export default function CourseEmailForm({ courseName }) {
   // snackbar notification state
   const { enqueueSnackbar } = useSnackbar();
 
   //email message state
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [course, setCourse] = useState();
-  const [startEndDates, setStartEndDates] = useState();
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
   const [hoursPerWeek, setHoursPerWeek] = useState();
   const [message, setMessage] = useState();
   const [nameValid, setNameValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
-  const [courseValid, setCourseValid] = useState(false);
-  const [startEndDatesValid, setStartEndDatesValid] = useState(false);
+  const [startDateValid, setStartDateValid] = useState(false);
+  const [endDateValid, setEndDateValid] = useState(false);
   const [hoursPerWeekValid, setHoursPerWeekValid] = useState(false);
-  const [messageValid, setMessageValid] = useState(false);
   const [submitDisabled, setSubmitDisabled] = useState(true);
 
   // saves the user's name entered to state
@@ -43,10 +48,9 @@ export default function ClassEmailForm() {
     let submitValid =
       nameValid &&
       emailValid &&
-      courseValid &&
-      startEndDatesValid &&
-      hoursPerWeekValid &&
-      messageValid;
+      startDateValid &&
+      endDateValid &&
+      hoursPerWeekValid;
     setName(event.target.value);
     setNameValid(nameValid);
     setSubmitDisabled(!submitValid);
@@ -58,42 +62,39 @@ export default function ClassEmailForm() {
     let submitValid =
       emailValid &&
       nameValid &&
-      courseValid &&
-      startEndDatesValid &&
-      hoursPerWeekValid &&
-      messageValid;
+      startDateValid &&
+      endDateValid &&
+      hoursPerWeekValid;
     setEmail(event.target.value);
     setEmailValid(emailValid);
     setSubmitDisabled(!submitValid);
   }
 
-  // saves the user's course(s) entered to state
-  function courseChange(event) {
-    let courseValid = event.target.value ? true : false;
+  // saves the user's start date selected to state
+  function startDateChange(event) {
+    let startDateValid = event.format("LL") ? true : false;
     let submitValid =
-      courseValid &&
+      startDateValid &&
       emailValid &&
       nameValid &&
-      startEndDatesValid &&
-      hoursPerWeekValid &&
-      messageValid;
-    setCourse(event.target.value);
-    setCourseValid(courseValid);
+      endDateValid &&
+      hoursPerWeekValid;
+    setStartDate(event.format("LL"));
+    setStartDateValid(startDateValid);
     setSubmitDisabled(!submitValid);
   }
 
-  // saves the user's start end dates entered to state
-  function startEndDatesChange(event) {
-    let startEndDatesValid = event.target.value ? true : false;
+  // saves the user's end date selected to state
+  function endDateChange(event) {
+    let endDateValid = event.format("LL") ? true : false;
     let submitValid =
-      startEndDatesValid &&
-      courseValid &&
+      endDateValid &&
       emailValid &&
       nameValid &&
-      hoursPerWeekValid &&
-      messageValid;
-    setStartEndDates(event.target.value);
-    setStartEndDatesValid(startEndDatesValid);
+      startDateValid &&
+      hoursPerWeekValid;
+    setEndDate(event.format("LL"));
+    setEndDateValid(endDateValid);
     setSubmitDisabled(!submitValid);
   }
 
@@ -102,11 +103,10 @@ export default function ClassEmailForm() {
     let hoursPerWeekValid = event.target.value ? true : false;
     let submitValid =
       hoursPerWeekValid &&
-      courseValid &&
       emailValid &&
       nameValid &&
-      startEndDatesValid &&
-      messageValid;
+      startDateValid &&
+      endDateValid;
     setHoursPerWeek(event.target.value);
     setHoursPerWeekValid(hoursPerWeekValid);
     setSubmitDisabled(!submitValid);
@@ -114,16 +114,13 @@ export default function ClassEmailForm() {
 
   // saves the user's message entered to state
   function messageChange(event) {
-    let messageValid = event.target.value ? true : false;
     let submitValid =
-      messageValid &&
       emailValid &&
       nameValid &&
-      courseValid &&
-      startEndDatesValid &&
+      startDateValid &&
+      endDateValid &&
       hoursPerWeekValid;
     setMessage(event.target.value);
-    setMessageValid(messageValid);
     setSubmitDisabled(!submitValid);
   }
 
@@ -145,8 +142,9 @@ export default function ClassEmailForm() {
       {
         name: name,
         email: email,
-        course: course,
-        startEndDates: startEndDates,
+        course: courseName,
+        startDate: startDate,
+        endDate: endDate,
         hoursPerWeek: hoursPerWeek,
         message: message
       },
@@ -175,6 +173,13 @@ export default function ClassEmailForm() {
   };
 
   const classes = useStyles();
+
+  // Define valid start/end date by forcing earliest as today for Datetime component
+  const yesterday = Datetime.moment().subtract(1, "day");
+  const valid = (current) => {
+    return current.isAfter(yesterday);
+  };
+
   return (
     <form
       onSubmit={(event) => {
@@ -184,7 +189,7 @@ export default function ClassEmailForm() {
       <GridContainer>
         <GridItem xs={12} sm={12} md={6}>
           <CustomInput
-            labelText="Your Name"
+            labelText="Your Name *"
             id="name"
             formControlProps={{
               fullWidth: true
@@ -196,7 +201,7 @@ export default function ClassEmailForm() {
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <CustomInput
-            labelText="Your Email"
+            labelText="Your Email *"
             id="email"
             formControlProps={{
               fullWidth: true
@@ -207,32 +212,33 @@ export default function ClassEmailForm() {
           />
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
-          <CustomInput
-            labelText="Desired Course(s)"
-            id="course"
-            formControlProps={{
-              fullWidth: true
-            }}
-            inputProps={{
-              onChange: (event) => courseChange(event)
-            }}
-          />
+          <FormControl fullWidth>
+            <InputLabel shrink>Start Date *</InputLabel>
+            <br />
+            <Datetime
+              inputProps={{ placeholder: "Choose a start date" }}
+              onChange={(event) => startDateChange(event)}
+              isValidDate={valid}
+              timeFormat={false}
+            />
+            <br />
+          </FormControl>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={6}>
+          <FormControl fullWidth>
+            <InputLabel shrink>End Date *</InputLabel>
+            <br />
+            <Datetime
+              inputProps={{ placeholder: "Choose an end date" }}
+              onChange={(event) => endDateChange(event)}
+              isValidDate={valid}
+              timeFormat={false}
+            />
+          </FormControl>
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <CustomInput
-            labelText="Start & End Dates (e.g. 7/11/2020 - 9/5/2020)"
-            id="startEndDates"
-            formControlProps={{
-              fullWidth: true
-            }}
-            inputProps={{
-              onChange: (event) => startEndDatesChange(event)
-            }}
-          />
-        </GridItem>
-        <GridItem xs={12} sm={12} md={6}>
-          <CustomInput
-            labelText="Hours per Week (e.g. 1-3 PM, Saturdays)"
+            labelText="Hours/Week (e.g. 1-3 PM, Saturdays) *"
             id="hoursPerWeek"
             formControlProps={{
               fullWidth: true
@@ -243,7 +249,7 @@ export default function ClassEmailForm() {
           />
         </GridItem>
         <CustomInput
-          labelText="Additional Information (e.g. reason, other expectations/requests, etc.)"
+          labelText="Other (e.g. additional contact information, motivation for course, special requests)"
           id="message"
           formControlProps={{
             fullWidth: true,
@@ -257,7 +263,7 @@ export default function ClassEmailForm() {
         />
         <GridItem xs={12} sm={12} md={4}>
           <Button type="submit" color="primary" disabled={submitDisabled}>
-            Send Message
+            Submit
           </Button>
         </GridItem>
       </GridContainer>

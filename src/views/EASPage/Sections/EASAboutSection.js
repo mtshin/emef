@@ -25,7 +25,7 @@ export default function EASAboutSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Our Philosophy</h2>
-          <h5 className={classes.description}>
+          <h4 className={classes.description}>
             We truly believe anyone can be an artist and convey this message to
             our students through our teaching methodology. A potent visual
             thinking process is crucial to an artist and is developed by
@@ -34,7 +34,7 @@ export default function EASAboutSection() {
             passion, open mindedness, respectfulness, willingness to share
             ideas, and strong fundamentals are the core values of the EAS
             culture and is reflected in our final works.
-          </h5>
+          </h4>
         </GridItem>
       </GridContainer>
       <VideoPlayer

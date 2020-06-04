@@ -38,9 +38,9 @@ export default function EASGallerySection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Gallery</h2>
-          <h5 className={classes.description}>
+          <h4 className={classes.description}>
             Explore works done from our students and instructors!
-          </h5>
+          </h4>
         </GridItem>
       </GridContainer>
       <div>

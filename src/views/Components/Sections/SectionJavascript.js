@@ -70,6 +70,7 @@ export default function SectionJavascript() {
                   onClose={() => setClassicModal(false)}
                   aria-labelledby="classic-modal-slide-title"
                   aria-describedby="classic-modal-slide-description"
+                  disableBackdropClick={true}
                 >
                   <DialogTitle
                     id="classic-modal-slide-title"
@@ -143,7 +144,7 @@ export default function SectionJavascript() {
             <div className={classes.title}>
               <h3>Popovers</h3>
             </div>
-            <Button onClick={event => setAnchorElLeft(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElLeft(event.currentTarget)}>
               On left
             </Button>
             <Popover
@@ -168,7 +169,7 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElTop(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElTop(event.currentTarget)}>
               On top
             </Button>
             <Popover
@@ -192,7 +193,7 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElBottom(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElBottom(event.currentTarget)}>
               On bottom
             </Button>
             <Popover
@@ -216,7 +217,7 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElRight(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElRight(event.currentTarget)}>
               On right
             </Button>
             <Popover

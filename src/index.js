@@ -14,7 +14,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import EASPage from "views/EASPage/EASPage.js";
-import EASStudioGallery from "views/EASPage/Gallery/EASStudioGallery.js";
+import EASStudioGallery from "views/EASPage/Galleries/EASStudioGallery.js";
 
 var hist = createBrowserHistory();
 

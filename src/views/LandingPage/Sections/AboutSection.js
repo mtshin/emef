@@ -24,7 +24,7 @@ export default function AboutSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Who We Are</h2>
-          <h5 className={classes.description}>
+          <h4 className={classes.description}>
             Evergreen Mission and Education Foundation 2016 INC. (EMEF) was
             founded on June 2016 based on Christian faith by Jeho
             &apos;Daniel&apos; Shin. Business divisions such as EAS (Evergreen
@@ -34,7 +34,7 @@ export default function AboutSection() {
             established on a dream to support the education of students
             financially and it alongside its business divisions hold neither
             religious or ethnic discrimination for all beneficiaries.
-          </h5>
+          </h4>
         </GridItem>
       </GridContainer>
       <div className={classes.section}>

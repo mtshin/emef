@@ -38,11 +38,11 @@ export default function BusinessSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Business Divisions</h2>
-          <h5 className={classes.description}>
+          <h4 className={classes.description}>
             In our efforts to push our non-profit initiative, we have
             established business divisions to provide affordable education by
             curated instructors tailored to fit any students&apos; needs.
-          </h5>
+          </h4>
         </GridItem>
       </GridContainer>
       <div>

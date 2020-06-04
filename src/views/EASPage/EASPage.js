@@ -20,8 +20,9 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import EASAboutSection from "./Sections/EASAboutSection.js";
-import EASGallerySection from "./Sections/EASGallerySection.js";
 import EASCoursesSection from "./Sections/EASCoursesSection.js";
+import EASGallerySection from "./Sections/EASGallerySection.js";
+import EASRegisterSection from "./Sections/EASRegisterSection.js";
 
 const dashboardRoutes = [];
 
@@ -39,7 +40,7 @@ export default function LandingPage(props) {
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
-          height: 400,
+          height: 50,
           color: "white"
         }}
         {...rest}
@@ -66,6 +67,7 @@ export default function LandingPage(props) {
           <EASAboutSection />
           <EASGallerySection />
           <EASCoursesSection />
+          <EASRegisterSection />
         </div>
       </div>
       <Footer />

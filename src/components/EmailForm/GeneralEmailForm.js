@@ -149,7 +149,7 @@ export default function GeneralEmailForm() {
         />
         <GridItem xs={12} sm={12} md={4}>
           <Button type="submit" color="primary" disabled={submitDisabled}>
-            Send Message
+            Submit
           </Button>
         </GridItem>
       </GridContainer>
