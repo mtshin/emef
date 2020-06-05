@@ -33,11 +33,7 @@ export default function SectionBasics() {
   const [checkedA, setCheckedA] = React.useState(true);
   const [checkedB, setCheckedB] = React.useState(false);
   React.useEffect(() => {
-    if (
-      !document
-        .getElementById("sliderRegular")
-        .classList.contains("noUi-target")
-    ) {
+    if (!document.getElementById("sliderRegular").classList.contains("noUi-target")) {
       Slider.create(document.getElementById("sliderRegular"), {
         start: [40],
         connect: [true, false],
@@ -45,9 +41,7 @@ export default function SectionBasics() {
         range: { min: 0, max: 100 }
       });
     }
-    if (
-      !document.getElementById("sliderDouble").classList.contains("noUi-target")
-    ) {
+    if (!document.getElementById("sliderDouble").classList.contains("noUi-target")) {
       Slider.create(document.getElementById("sliderDouble"), {
         start: [20, 60],
         connect: [false, true, false],
@@ -57,7 +51,7 @@ export default function SectionBasics() {
     }
     return function cleanup() {};
   });
-  const handleToggle = value => {
+  const handleToggle = (value) => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
 
@@ -219,13 +213,7 @@ export default function SectionBasics() {
               <div className={classes.title}>
                 <h3>Checkboxes</h3>
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -243,13 +231,7 @@ export default function SectionBasics() {
                   label="Unchecked"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -268,13 +250,7 @@ export default function SectionBasics() {
                   label="Checked"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   disabled
                   control={
@@ -296,13 +272,7 @@ export default function SectionBasics() {
                   label="Disabled Unchecked"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   disabled
                   control={
@@ -330,13 +300,7 @@ export default function SectionBasics() {
               <div className={classes.title}>
                 <h3>Radio Buttons</h3>
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   control={
                     <Radio
@@ -345,12 +309,8 @@ export default function SectionBasics() {
                       value="a"
                       name="radio button enabled"
                       aria-label="A"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
+                      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+                      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
                       classes={{
                         checked: classes.radio,
                         root: classes.radioRoot
@@ -364,13 +324,7 @@ export default function SectionBasics() {
                   label="First Radio"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   control={
                     <Radio
@@ -379,12 +333,8 @@ export default function SectionBasics() {
                       value="b"
                       name="radio button enabled"
                       aria-label="B"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
+                      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+                      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
                       classes={{
                         checked: classes.radio,
                         root: classes.radioRoot
@@ -398,13 +348,7 @@ export default function SectionBasics() {
                   label="Second Radio"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   disabled
                   control={
@@ -413,12 +357,8 @@ export default function SectionBasics() {
                       value="a"
                       name="radio button disabled"
                       aria-label="B"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
+                      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+                      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
                       classes={{
                         checked: classes.radio,
                         disabled: classes.disabledCheckboxAndRadio,
@@ -433,13 +373,7 @@ export default function SectionBasics() {
                   label="Disabled Unchecked Radio"
                 />
               </div>
-              <div
-                className={
-                  classes.checkboxAndRadio +
-                  " " +
-                  classes.checkboxAndRadioHorizontal
-                }
-              >
+              <div className={classes.checkboxAndRadio + " " + classes.checkboxAndRadioHorizontal}>
                 <FormControlLabel
                   disabled
                   control={
@@ -448,12 +382,8 @@ export default function SectionBasics() {
                       value="b"
                       name="radio button disabled"
                       aria-label="B"
-                      icon={
-                        <FiberManualRecord className={classes.radioUnchecked} />
-                      }
-                      checkedIcon={
-                        <FiberManualRecord className={classes.radioChecked} />
-                      }
+                      icon={<FiberManualRecord className={classes.radioUnchecked} />}
+                      checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
                       classes={{
                         checked: classes.radio,
                         disabled: classes.disabledCheckboxAndRadio,
@@ -475,7 +405,7 @@ export default function SectionBasics() {
                   control={
                     <Switch
                       checked={checkedA}
-                      onChange={event => setCheckedA(event.target.checked)}
+                      onChange={(event) => setCheckedA(event.target.checked)}
                       value="checkedA"
                       classes={{
                         switchBase: classes.switchBase,
@@ -496,7 +426,7 @@ export default function SectionBasics() {
                   control={
                     <Switch
                       checked={checkedB}
-                      onChange={event => setCheckedB(event.target.checked)}
+                      onChange={(event) => setCheckedB(event.target.checked)}
                       value="checkedB"
                       classes={{
                         switchBase: classes.switchBase,
@@ -522,16 +452,8 @@ export default function SectionBasics() {
               <div className={classes.title}>
                 <h3>Progress Bars</h3>
               </div>
-              <CustomLinearProgress
-                variant="determinate"
-                color="primary"
-                value={30}
-              />
-              <CustomLinearProgress
-                variant="determinate"
-                color="info"
-                value={60}
-              />
+              <CustomLinearProgress variant="determinate" color="primary" value={30} />
+              <CustomLinearProgress variant="determinate" color="info" value={60} />
               <CustomLinearProgress
                 variant="determinate"
                 color="success"

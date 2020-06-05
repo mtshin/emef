@@ -38,9 +38,7 @@ export default function EASGallerySection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Gallery</h2>
-          <h4 className={classes.description}>
-            Explore works done from our students and instructors!
-          </h4>
+          <h4 className={classes.description}>Explore works done from our students and instructors!</h4>
         </GridItem>
       </GridContainer>
       <div>
@@ -48,24 +46,29 @@ export default function EASGallerySection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card>
               <img
-                style={{ height: "180px", width: "100%", display: "block" }}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column"
+                }}
                 className={cardClasses.imgCardTop}
                 src={EASPhoto}
                 alt="EASPhoto"
               />
               <CardBody
-                style={{ height: "250px", width: "100%", display: "block" }}
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: "column"
+                }}
               >
                 <h4 className={cardClasses.cardTitle}>Studio Gallery</h4>
-                <p>
-                  Works done by our EAS instructors. Available for commisions or
-                  sale!
-                </p>
-                <Button
-                  component={Link}
-                  to="/eas/studioGallery"
-                  color="primary"
-                >
+                <p>Works done by our EAS instructors. Available for commisions or sale!</p>
+                <Button component={Link} to="/eas/studioGallery" color="primary">
                   Visit EAS
                 </Button>
               </CardBody>
@@ -74,20 +77,18 @@ export default function EASGallerySection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card>
               <img
-                style={{ height: "180px", width: "100%", display: "block" }}
+                style={{ height: "100%", width: "100%", display: "flex", justifyContent: "center", flexDirection: "column" }}
                 className={cardClasses.imgCardTop}
                 src={EAMCSPhoto}
                 alt="EAMCSPhoto"
               />
               <CardBody
-                style={{ height: "250px", width: "100%", display: "block" }}
+                style={{ height: "100%", width: "100%", display: "flex", justifyContent: "center", flexDirection: "column" }}
               >
-                <h4 className={cardClasses.cardTitle}>
-                  Evergreen Academy of Math and Computer Science
-                </h4>
+                <h4 className={cardClasses.cardTitle}>Evergreen Academy of Math and Computer Science</h4>
                 <p>
-                  Offers a test mastery based approach to learning technical
-                  skills in the world of Math and Computer Science.
+                  Offers a test mastery based approach to learning technical skills in the world of Math and Computer
+                  Science.
                 </p>
                 <Button color="primary">Visit EAMCS</Button>
               </CardBody>

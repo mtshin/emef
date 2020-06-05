@@ -45,12 +45,7 @@ export default function CourseEmailForm({ courseName }) {
   // saves the user's name entered to state
   function nameChange(event) {
     let nameValid = event.target.value ? true : false;
-    let submitValid =
-      nameValid &&
-      emailValid &&
-      startDateValid &&
-      endDateValid &&
-      hoursPerWeekValid;
+    let submitValid = nameValid && emailValid && startDateValid && endDateValid && hoursPerWeekValid;
     setName(event.target.value);
     setNameValid(nameValid);
     setSubmitDisabled(!submitValid);
@@ -59,12 +54,7 @@ export default function CourseEmailForm({ courseName }) {
   // saves the user's email entered to state
   function emailChange(event) {
     let emailValid = event.target.value ? true : false;
-    let submitValid =
-      emailValid &&
-      nameValid &&
-      startDateValid &&
-      endDateValid &&
-      hoursPerWeekValid;
+    let submitValid = emailValid && nameValid && startDateValid && endDateValid && hoursPerWeekValid;
     setEmail(event.target.value);
     setEmailValid(emailValid);
     setSubmitDisabled(!submitValid);
@@ -73,12 +63,7 @@ export default function CourseEmailForm({ courseName }) {
   // saves the user's start date selected to state
   function startDateChange(event) {
     let startDateValid = event.format("LL") ? true : false;
-    let submitValid =
-      startDateValid &&
-      emailValid &&
-      nameValid &&
-      endDateValid &&
-      hoursPerWeekValid;
+    let submitValid = startDateValid && emailValid && nameValid && endDateValid && hoursPerWeekValid;
     setStartDate(event.format("LL"));
     setStartDateValid(startDateValid);
     setSubmitDisabled(!submitValid);
@@ -87,12 +72,7 @@ export default function CourseEmailForm({ courseName }) {
   // saves the user's end date selected to state
   function endDateChange(event) {
     let endDateValid = event.format("LL") ? true : false;
-    let submitValid =
-      endDateValid &&
-      emailValid &&
-      nameValid &&
-      startDateValid &&
-      hoursPerWeekValid;
+    let submitValid = endDateValid && emailValid && nameValid && startDateValid && hoursPerWeekValid;
     setEndDate(event.format("LL"));
     setEndDateValid(endDateValid);
     setSubmitDisabled(!submitValid);
@@ -101,12 +81,7 @@ export default function CourseEmailForm({ courseName }) {
   // saves the user's hours per week entered to state
   function hoursPerWeekChange(event) {
     let hoursPerWeekValid = event.target.value ? true : false;
-    let submitValid =
-      hoursPerWeekValid &&
-      emailValid &&
-      nameValid &&
-      startDateValid &&
-      endDateValid;
+    let submitValid = hoursPerWeekValid && emailValid && nameValid && startDateValid && endDateValid;
     setHoursPerWeek(event.target.value);
     setHoursPerWeekValid(hoursPerWeekValid);
     setSubmitDisabled(!submitValid);
@@ -114,12 +89,7 @@ export default function CourseEmailForm({ courseName }) {
 
   // saves the user's message entered to state
   function messageChange(event) {
-    let submitValid =
-      emailValid &&
-      nameValid &&
-      startDateValid &&
-      endDateValid &&
-      hoursPerWeekValid;
+    let submitValid = emailValid && nameValid && startDateValid && endDateValid && hoursPerWeekValid;
     setMessage(event.target.value);
     setSubmitDisabled(!submitValid);
   }
@@ -160,14 +130,14 @@ export default function CourseEmailForm({ courseName }) {
         // Email successfully sent alert
         enqueueSnackbar("Form successfully sent!", {
           variant: "success",
-          autoHideDuration: 3000
+          autoHideDuration: 5000
         });
       })
       // Email Failed to send Error alert
-      .catch(() => {
-        enqueueSnackbar("Failed to send form!", {
+      .catch((error) => {
+        enqueueSnackbar(`Failed to send form! ${error}`, {
           variant: "error",
-          autoHideDuration: 3000
+          autoHideDuration: 5000
         });
       });
   };

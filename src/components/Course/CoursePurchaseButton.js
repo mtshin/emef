@@ -17,18 +17,19 @@ export default function CoursePurchaseButton({ amount }) {
       shippingPreference="NO_SHIPPING"
       onSuccess={(details) => {
         // Transaction completed
-        enqueueSnackbar(
-          `Thank you for your purchase, ${details.payer.name.given_name}! `,
-          {
-            variant: "success",
-            autoHideDuration: 3000
-          }
-        );
+        enqueueSnackbar(`Thank you for your purchase, ${details.payer.name.given_name}! `, {
+          variant: "success",
+          autoHideDuration: 5000
+        });
       }}
       onError={(error) => {
-        enqueueSnackbar(`Transaction failed! ${error}`, {
-          variant: "success",
-          autoHideDuration: 3000
+        let errorMsg = error;
+        if (amount === 0) {
+          errorMsg = "Please select at least one payment option.";
+        }
+        enqueueSnackbar(`Transaction failed! ${errorMsg}`, {
+          variant: "error",
+          autoHideDuration: 5000
         });
       }}
     />

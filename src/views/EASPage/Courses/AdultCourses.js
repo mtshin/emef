@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
+import Class from "@material-ui/icons/Class";
 import Schedule from "@material-ui/icons/Schedule";
 
 // core components
+import Button from "components/CustomButtons/Button.js";
+import CourseCourseRegisterModal from "components/Course/CourseRegisterModal.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
 
@@ -14,7 +16,9 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/pills
 
 const useStyles = makeStyles(styles);
 
-export default function KidCourses() {
+export default function AdultCourses() {
+  const [modal, setModal] = useState(false);
+
   const classes = useStyles();
   return (
     <GridItem xs={12} sm={12} md={12} lg={6}>
@@ -26,16 +30,24 @@ export default function KidCourses() {
         }}
         tabs={[
           {
-            tabButton: "Dashboard",
-            tabIcon: Dashboard,
+            tabButton: "Math class",
+            tabIcon: Class,
             tabContent: (
-              <span>
-                <p className={classes.description}>
-                  Collaboratively administrate empowered markets via
-                  plug-and-play networks. Dynamically procrastinate B2C users
-                  after installed base benefits.
+              <div>
+                <p className={classes.description}>A math class</p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Schedule:</b>&nbsp;12-1 PM, Saturdays
                 </p>
-              </span>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees (optional)
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Registration:</b>&nbsp;$20 (first time only)
+                </p>
+                <Button style={{ boxShadow: "none" }} color="info" round onClick={() => setModal(true)}>
+                  Modal
+                </Button>
+              </div>
             )
           },
           {
@@ -44,14 +56,20 @@ export default function KidCourses() {
             tabContent: (
               <span>
                 <p className={classes.description}>
-                  Efficiently unleash cross-media information without
-                  cross-media value. Quickly maximize timely deliverables for
-                  real-time schemas.
+                  Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
+                  for real-time schemas.
                 </p>
               </span>
             )
           }
         ]}
+      />
+      <CourseCourseRegisterModal
+        modal={modal}
+        setModal={setModal}
+        courseName="Math Course I"
+        courseTuition={25}
+        courseRegistration={50}
       />
     </GridItem>
   );

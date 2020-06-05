@@ -14,6 +14,11 @@ const pillsStyle = {
   description: {
     color: "#999"
   },
+  courseDetails: {
+    color: "#999",
+    display: "flex",
+    justifyContent: "left"
+  },
   courseTitle: {
     fontWeight: "bold"
   }

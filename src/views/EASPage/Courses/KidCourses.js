@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
+import Class from "@material-ui/icons/Class";
 import Schedule from "@material-ui/icons/Schedule";
 
 // core components
@@ -30,19 +30,28 @@ export default function KidCourses() {
         }}
         tabs={[
           {
-            tabButton: "Dashboard",
-            tabIcon: Dashboard,
+            tabButton: "AM (Art & Math) Class",
+            tabIcon: Class,
             tabContent: (
-              <span>
+              <div>
                 <p className={classes.description}>
-                  Collaboratively administrate empowered markets via
-                  plug-and-play networks. Dynamically procrastinate B2C users
-                  after installed base benefits.
+                  A Montessori inspired course teaching children of ages 3-6 the principles of Art & Math with an emphasis on
+                  hands-on learning activities. The use of utilizing sensory materials has been a tried and true approach for
+                  teaching children of this age group fundamental skills to grow upon.
                 </p>
-                <Button color="info" round onClick={() => setModal(true)}>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Schedule:</b>&nbsp;12-1 PM, Saturdays
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees (optional)
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Registration:</b>&nbsp;$20 (first time only)
+                </p>
+                <Button style={{ boxShadow: "none" }} color="info" round onClick={() => setModal(true)}>
                   Modal
                 </Button>
-              </span>
+              </div>
             )
           },
           {
@@ -51,9 +60,8 @@ export default function KidCourses() {
             tabContent: (
               <span>
                 <p className={classes.description}>
-                  Efficiently unleash cross-media information without
-                  cross-media value. Quickly maximize timely deliverables for
-                  real-time schemas.
+                  Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
+                  for real-time schemas.
                 </p>
               </span>
             )
@@ -64,6 +72,8 @@ export default function KidCourses() {
         modal={modal}
         setModal={setModal}
         courseName="Art Course II"
+        courseTuition={15}
+        courseRegistration={30}
       />
     </GridItem>
   );

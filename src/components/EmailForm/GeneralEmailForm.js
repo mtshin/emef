@@ -90,14 +90,14 @@ export default function GeneralEmailForm() {
         // Email successfully sent alert
         enqueueSnackbar("Form successfully sent!", {
           variant: "success",
-          autoHideDuration: 3000
+          autoHideDuration: 5000
         });
       })
       // Email Failed to send Error alert
-      .catch(() => {
-        enqueueSnackbar("Failed to send form!", {
+      .catch((error) => {
+        enqueueSnackbar(`Failed to send form! ${error}`, {
           variant: "error",
-          autoHideDuration: 3000
+          autoHideDuration: 5000
         });
       });
   };
