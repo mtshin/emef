@@ -14,6 +14,10 @@ const aboutStyle = {
   },
   description: {
     color: "#999"
+  },
+  buttonSidePadding: {
+    paddingLeft: "1rem",
+    paddingRight: "1rem"
   }
 };
 

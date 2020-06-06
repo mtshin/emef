@@ -35,7 +35,7 @@ export default function KidCourses() {
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  A Montessori inspired course teaching children of ages 3-6 the principles of Art & Math with an emphasis on
+                  A Montessori inspired class teaching children of ages 3-6 the principles of Art & Math with an emphasis on
                   hands-on learning activities. The use of utilizing sensory materials has been a tried and true approach for
                   teaching children of this age group fundamental skills to grow upon.
                 </p>
@@ -71,7 +71,7 @@ export default function KidCourses() {
       <CourseCourseRegisterModal
         modal={modal}
         setModal={setModal}
-        courseName="Art Course II"
+        courseName="Art Class II"
         courseTuition={15}
         courseRegistration={30}
       />
