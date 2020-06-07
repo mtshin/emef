@@ -28,11 +28,19 @@ Transition.displayName = "Transition";
 
 const useStyles = makeStyles(styles);
 
-export default function CourseRegisterModal({ modal, setModal, courseName, courseTuition, courseRegistration }) {
+export default function CourseRegisterModal({
+  modal,
+  setModal,
+  courseName,
+  courseTuition,
+  courseRegistration,
+  courseMaterial
+}) {
   const classes = useStyles();
   const [checkedState, setCheckedState] = useState({
     Tuition: false,
-    Registration: false
+    Registration: false,
+    Material: false
   });
 
   const [hoursState, setHoursState] = useState({ hoursformat: "" });
@@ -62,17 +70,35 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
 
     if (customPaymentState.custompaymentformat <= 0) {
       if (checkedState.Tuition && hoursState.hoursformat > 0 && checkedState.Registration) {
-        amount = courseTuition * hoursState.hoursformat + courseRegistration;
+        if (checkedState.Material) {
+          amount = (courseTuition + courseMaterial) * hoursState.hoursformat + courseRegistration;
+        } else {
+          amount = courseTuition * hoursState.hoursformat + courseRegistration;
+        }
       } else if (checkedState.Registration && !checkedState.Tuition) {
         amount = courseRegistration;
       } else if (checkedState.Tuition && hoursState.hoursformat > 0 && !checkedState.Registration) {
-        amount = courseTuition * hoursState.hoursformat;
+        if (checkedState.Material) {
+          amount = (courseTuition + courseMaterial) * hoursState.hoursformat;
+        } else {
+          amount = courseTuition * hoursState.hoursformat;
+        }
       }
     } else {
       amount = customPaymentState.custompaymentformat;
     }
 
     return Math.round(amount * 100) / 100;
+  };
+
+  const resetPaymentStates = () => {
+    setCheckedState({
+      Tuition: false,
+      Registration: false,
+      Material: false
+    });
+    setHoursState({ hoursformat: "" });
+    setCustomPaymentState({ custompaymentformat: "" });
   };
 
   return (
@@ -83,8 +109,9 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
       }}
       open={modal}
       TransitionComponent={Transition}
-      keepMounted
-      onClose={() => setModal(false)}
+      onClose={() => {
+        setModal(false);
+      }}
       aria-labelledby="classic-modal-slide-title"
       aria-describedby="classic-modal-slide-description"
       disableBackdropClick={true}
@@ -95,7 +122,10 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
           key="close"
           aria-label="Close"
           color="inherit"
-          onClick={() => setModal(false)}
+          onClick={() => {
+            resetPaymentStates();
+            setModal(false);
+          }}
         >
           <Close className={classes.modalClose} />
         </IconButton>
@@ -108,9 +138,9 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
           <b>Pre-Registration</b>
         </h5>
         <p>
-          Please submit the form below to begin the registration process (fields marked with an * are required). We will get
-          back to you as soon as possible for next steps and to get to know each other better in order for us to best meet
-          your needs! <br />
+          Submit the form below to begin the registration process (fields marked with an * are required). We will get back to
+          you as soon as possible for next steps and to get to know each other better in order for us to best meet your
+          needs! <br />
         </p>
         <CourseEmailForm courseName={courseName} />
         <h5 className={classes.modalTitle}>
@@ -124,7 +154,12 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
         </p>
 
         <p>
-          <b>Please select desired payment(s):</b>
+          We accept other payment methods as well for your convenience (e.g. cash, personal check, etc.). Please contact us
+          directly to set up an alternative payment plan!
+        </p>
+
+        <p>
+          <b>Please enter desired class hours for tuition/material fees and select payment(s):</b>
         </p>
         <CoursePurchaseSelection
           checkedState={checkedState}
@@ -133,16 +168,28 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
           handleHoursChange={handleHoursChange}
           customPaymentState={customPaymentState}
           handleCustomPaymentChange={handleCustomPaymentChange}
+          setCheckedState={setCheckedState}
         />
         <br />
         <h5 className={classes.modalTitle}>
           <b>Total: ${calculateTotalAmount()}</b>
         </h5>
         <br />
+        <p>
+          *<b>Venmo</b>: Ensure the app is connected to the browser you are using to purchase in Settings &gt; Connect
+          Browsers to see it as a payment option.
+        </p>
         <CoursePurchaseButton amount={calculateTotalAmount()} />
       </DialogContent>
       <DialogActions className={classes.modalFooter}>
-        <Button onClick={() => setModal(false)} color="primary" simple>
+        <Button
+          onClick={() => {
+            resetPaymentStates();
+            setModal(false);
+          }}
+          color="primary"
+          simple
+        >
           Close
         </Button>
       </DialogActions>

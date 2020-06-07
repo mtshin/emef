@@ -186,7 +186,7 @@ export default function CourseEmailForm({ courseName }) {
             <InputLabel shrink>Start Date *</InputLabel>
             <br />
             <Datetime
-              inputProps={{ placeholder: "Choose a start date" }}
+              inputProps={{ placeholder: "Choose a start date", readOnly: true }}
               onChange={(event) => startDateChange(event)}
               isValidDate={valid}
               timeFormat={false}
@@ -199,7 +199,7 @@ export default function CourseEmailForm({ courseName }) {
             <InputLabel shrink>End Date *</InputLabel>
             <br />
             <Datetime
-              inputProps={{ placeholder: "Choose an end date" }}
+              inputProps={{ placeholder: "Choose an end date", readOnly: true }}
               onChange={(event) => endDateChange(event)}
               isValidDate={valid}
               timeFormat={false}

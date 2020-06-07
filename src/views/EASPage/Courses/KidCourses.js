@@ -18,6 +18,12 @@ const useStyles = makeStyles(styles);
 
 export default function KidCourses() {
   const [modal, setModal] = useState(false);
+  const [courseInfo, setCourseInfo] = useState({
+    courseName: "",
+    courseTuition: "",
+    courseRegistration: "",
+    courseMaterial: ""
+  });
 
   const classes = useStyles();
   return (
@@ -30,40 +36,86 @@ export default function KidCourses() {
         }}
         tabs={[
           {
-            tabButton: "AM (Art & Math) Class",
+            tabButton: "AM (Art & Math)",
             tabIcon: Class,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  A Montessori inspired class teaching children of ages 3-6 the principles of Art & Math with an emphasis on
-                  hands-on learning activities. The use of utilizing sensory materials has been a tried and true approach for
-                  teaching children of this age group fundamental skills to grow upon.
+                  A Montessori inspired class teaching children the principles of Art & Math with an emphasis on hands-on
+                  learning activities. The use of utilizing sensory materials has been a tried and true approach for teaching
+                  children of this age group fundamental skills to grow upon.
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Schedule:</b>&nbsp;12-1 PM, Saturdays
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees (optional)
+                  <b>Age:</b>&nbsp;3-6
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees ($6/hr, optional)
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
                 </p>
-                <Button style={{ boxShadow: "none" }} color="info" round onClick={() => setModal(true)}>
-                  Modal
+                <Button
+                  style={{ boxShadow: "none" }}
+                  color="info"
+                  round
+                  onClick={() => {
+                    setCourseInfo({
+                      courseName: "AM (Art & Math)",
+                      courseTuition: 20,
+                      courseRegistration: 20,
+                      courseMaterial: 6
+                    });
+                    setModal(true);
+                  }}
+                >
+                  Register
                 </Button>
               </div>
             )
           },
           {
-            tabButton: "Schedule",
+            tabButton: "Drawing & Painting (Kids)",
             tabIcon: Schedule,
             tabContent: (
-              <span>
+              <div>
                 <p className={classes.description}>
-                  Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables
-                  for real-time schemas.
+                  Explore the line, shape, color, texture, form, and space of art from historical works, contemporary pieces,
+                  nature, and real objects to learn how to see and what to see. Create your own masterpieces in subjects
+                  (still life, animal, portrait, landscape, etc.) and materials (pencil, poil pastel, oil paint, watercolor,
+                  acrylic, etc.) of your choice!
                 </p>
-              </span>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Schedule:</b>&nbsp;1-4 PM, Saturdays
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Age:</b>&nbsp;Pre-K to High School
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$15/hr + Material Fees ($6/hr, optional)
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Registration:</b>&nbsp;$20 (first time only)
+                </p>
+                <Button
+                  style={{ boxShadow: "none" }}
+                  color="info"
+                  round
+                  onClick={() => {
+                    setCourseInfo({
+                      courseName: "Drawing & Painting (Kids)",
+                      courseTuition: 15,
+                      courseRegistration: 20,
+                      courseMaterial: 6
+                    });
+                    setModal(true);
+                  }}
+                >
+                  Register
+                </Button>
+              </div>
             )
           }
         ]}
@@ -71,9 +123,10 @@ export default function KidCourses() {
       <CourseCourseRegisterModal
         modal={modal}
         setModal={setModal}
-        courseName="Art Class II"
-        courseTuition={15}
-        courseRegistration={30}
+        courseName={courseInfo.courseName}
+        courseTuition={courseInfo.courseTuition}
+        courseRegistration={courseInfo.courseRegistration}
+        courseMaterial={courseInfo.courseMaterial}
       />
     </GridItem>
   );
