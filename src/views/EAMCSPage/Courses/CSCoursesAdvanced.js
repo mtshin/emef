@@ -35,23 +35,28 @@ export default function CSCoursesAdvanced() {
         }}
         tabs={[
           {
-            tabButton: "CS Class ADV I",
+            tabButton: "Coms III (Website construction I)",
             tabIcon: Code,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  A Montessori inspired class teaching children the principles of Art & Math with an emphasis on hands-on
-                  learning activities. The use of utilizing sensory materials has been a tried and true approach for teaching
-                  children of this age group fundamental skills to grow upon.
+                  Learn the language that all websites are built from at the core. You will learn the fundamentals and best
+                  practices of website design to build a solid foundation for web development!
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;12-1 PM, Saturdays
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online only
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;3-6
+                  <b>Textbook:</b>&nbsp;HTML and CSS: Design and Build Websites 1st Edition, ISBN-10 - 1118008189
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees ($6/hr, optional)
+                  <b>Age:</b>&nbsp;Any
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -65,8 +70,8 @@ export default function CSCoursesAdvanced() {
                   round
                   onClick={() => {
                     setCourseInfo({
-                      courseName: "CS Class I",
-                      courseTuition: 20,
+                      courseName: "Coms III (Website construction I)",
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -78,24 +83,28 @@ export default function CSCoursesAdvanced() {
             )
           },
           {
-            tabButton: "CS Class II",
+            tabButton: "Coms IV (Website construction II)",
             tabIcon: Code,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  Explore the line, shape, color, texture, form, and space of art from historical works, contemporary pieces,
-                  nature, and real objects to learn how to see and what to see. Create your own masterpieces in subjects
-                  (still life, animal, portrait, landscape, etc.) and materials (pencil, poil pastel, oil paint, watercolor,
-                  acrylic, etc.) of your choice!
+                  Take your design skills to the next level with our advanced HTML & CSS class. Learn how to turn static
+                  designs into responsive, scalable, and beautiful templates.
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;1-4 PM, Saturdays
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online only
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;Pre-K to High School
+                  <b>Textbook:</b>&nbsp;Design and Build Websites 1st Edition, ISBN-10 - 1118008189
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$15/hr + Material Fees ($6/hr, optional)
+                  <b>Age:</b>&nbsp;Any
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -109,8 +118,8 @@ export default function CSCoursesAdvanced() {
                   round
                   onClick={() => {
                     setCourseInfo({
-                      courseName: "CS Class II",
-                      courseTuition: 15,
+                      courseName: "Coms IV (Website construction II)",
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -122,24 +131,31 @@ export default function CSCoursesAdvanced() {
             )
           },
           {
-            tabButton: "CS Class III",
+            tabButton: "Coms V (Basic Programming)",
             tabIcon: DeveloperBoard,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  Explore the line, shape, color, texture, form, and space of art from historical works, contemporary pieces,
-                  nature, and real objects to learn how to see and what to see. Create your own masterpieces in subjects
-                  (still life, animal, portrait, landscape, etc.) and materials (pencil, poil pastel, oil paint, watercolor,
-                  acrylic, etc.) of your choice!
+                  The backend may not be visible but it is just as essential if not more in some cases than the frontend!
+                  This class will take you through the basics of sthe most popular backend languages (Java, Javascript,
+                  Python to name a few) so that you can tackle any problem or feature an app needs!
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;1-4 PM, Saturdays
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online only
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;Pre-K to High School
+                  <b>Textbook:</b>&nbsp; Programming: Computer Programming for Beginners: Learn the Basics of Java, SQL & C++
+                  - 2. Edition (Coding, C Programming, Java Programming, SQL Programming, JavaScript, Python, PHP) ISBN-10 -
+                  1518662587
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$15/hr + Material Fees ($6/hr, optional)
+                  <b>Age:</b>&nbsp;Any
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -153,8 +169,8 @@ export default function CSCoursesAdvanced() {
                   round
                   onClick={() => {
                     setCourseInfo({
-                      courseName: "CS Class II",
-                      courseTuition: 15,
+                      courseName: "Coms V (Basic Programming)",
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);

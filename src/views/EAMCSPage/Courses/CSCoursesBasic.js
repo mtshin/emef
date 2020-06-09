@@ -34,23 +34,28 @@ export default function CSCoursesBasic() {
         }}
         tabs={[
           {
-            tabButton: "CS Class I",
+            tabButton: "Coms 0 (Beginner)",
             tabIcon: Keyboard,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  A Montessori inspired class teaching children the principles of Art & Math with an emphasis on hands-on
-                  learning activities. The use of utilizing sensory materials has been a tried and true approach for teaching
-                  children of this age group fundamental skills to grow upon.
+                  It&apos;s never too late to learn! This class is tailored towards students who are looking to immerse
+                  themselves in computer skills that have now become a near necessity in our daily lives!
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;12-1 PM, Saturdays
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online or in class
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;3-6
+                  <b>Textbook:</b>&nbsp;Computers for Seniors - ISBN 9781119049548
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr + Material Fees ($6/hr, optional)
+                  <b>Age:</b>&nbsp;Seniors
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$15/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -64,51 +69,7 @@ export default function CSCoursesBasic() {
                   round
                   onClick={() => {
                     setCourseInfo({
-                      courseName: "CS Class I",
-                      courseTuition: 20,
-                      courseRegistration: 20
-                    });
-                    setModal(true);
-                  }}
-                >
-                  Register
-                </Button>
-              </div>
-            )
-          },
-          {
-            tabButton: "CS Class II",
-            tabIcon: Keyboard,
-            tabContent: (
-              <div>
-                <p className={classes.description}>
-                  Explore the line, shape, color, texture, form, and space of art from historical works, contemporary pieces,
-                  nature, and real objects to learn how to see and what to see. Create your own masterpieces in subjects
-                  (still life, animal, portrait, landscape, etc.) and materials (pencil, poil pastel, oil paint, watercolor,
-                  acrylic, etc.) of your choice!
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;1-4 PM, Saturdays
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;Pre-K to High School
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$15/hr + Material Fees ($6/hr, optional)
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Registration:</b>&nbsp;$20 (first time only)
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jeho &quot;Daniel&quot; Shin
-                </p>
-                <Button
-                  style={{ boxShadow: "none" }}
-                  color="info"
-                  round
-                  onClick={() => {
-                    setCourseInfo({
-                      courseName: "CS Class II",
+                      courseName: "Coms 0 (Beginner)",
                       courseTuition: 15,
                       courseRegistration: 20
                     });
@@ -121,24 +82,28 @@ export default function CSCoursesBasic() {
             )
           },
           {
-            tabButton: "CS Class III",
+            tabButton: "Coms I (Microsoft Office I)",
             tabIcon: Keyboard,
             tabContent: (
               <div>
                 <p className={classes.description}>
-                  Explore the line, shape, color, texture, form, and space of art from historical works, contemporary pieces,
-                  nature, and real objects to learn how to see and what to see. Create your own masterpieces in subjects
-                  (still life, animal, portrait, landscape, etc.) and materials (pencil, poil pastel, oil paint, watercolor,
-                  acrylic, etc.) of your choice!
+                  Our introductory course to Microsoft Office. We will cover the essential tools and shortcuts throughout the
+                  MS Office suite in order to maximize your productivity!
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Schedule:</b>&nbsp;1-4 PM, Saturdays
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online or in class
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Age:</b>&nbsp;Pre-K to High School
+                  <b>Textbook:</b>&nbsp;Introductory (Shelly Cashman) 1st Edition, ISBN-10 - 1285166027
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$15/hr + Material Fees ($6/hr, optional)
+                  <b>Age:</b>&nbsp;Any
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$15/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -152,7 +117,55 @@ export default function CSCoursesBasic() {
                   round
                   onClick={() => {
                     setCourseInfo({
-                      courseName: "CS Class III",
+                      courseName: "Coms I (Microsoft Office I)",
+                      courseTuition: 15,
+                      courseRegistration: 20
+                    });
+                    setModal(true);
+                  }}
+                >
+                  Register
+                </Button>
+              </div>
+            )
+          },
+          {
+            tabButton: "Coms II (Microsoft Office II)",
+            tabIcon: Keyboard,
+            tabContent: (
+              <div>
+                <p className={classes.description}>
+                  An advanced version of our Coms I (Microsoft Office I) focusing on more niche techniques, shortcuts, and
+                  workflows to help you tackle any MS Office task.
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Schedule:</b>&nbsp;Mon-Sat (8-10 PM)
+                  <br />
+                  Sat: (9 AM-4 PM)
+                  <br />* Online or in class
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Textbook:</b>&nbsp;Introductory (Shelly Cashman) 1st Edition, ISBN-10 - 1285166027
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Age:</b>&nbsp;Any
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Tuition:</b>&nbsp;$15/hr
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Registration:</b>&nbsp;$20 (first time only)
+                </p>
+                <p className={(classes.description, classes.courseDetails)}>
+                  <b>Instructor:</b>&nbsp;Jeho &quot;Daniel&quot; Shin
+                </p>
+                <Button
+                  style={{ boxShadow: "none" }}
+                  color="info"
+                  round
+                  onClick={() => {
+                    setCourseInfo({
+                      courseName: "Coms II (Microsoft Office II)",
                       courseTuition: 15,
                       courseRegistration: 20
                     });
