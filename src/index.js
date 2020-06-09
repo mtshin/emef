@@ -14,6 +14,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import EASPage from "views/EASPage/EASPage.js";
+import EAMCSPage from "views/EAMCSPage/EAMCSPage.js";
 import EASStudioGallery from "views/EASPage/Galleries/EASStudioGallery.js";
 
 var hist = createBrowserHistory();
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Route path="/components" component={Components} />
         <Route path="/eas/studioGallery" component={EASStudioGallery} />
         <Route path="/eas" component={EASPage} />
+        <Route path="/eamcs" component={EAMCSPage} />
         <Route path="/" component={LandingPage} />
       </Switch>
     </Router>

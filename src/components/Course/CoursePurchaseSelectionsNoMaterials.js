@@ -65,7 +65,7 @@ function MoneyFormat(props) {
   );
 }
 
-export default function CoursePurchaseSelections({
+export default function CoursePurchaseSelectionsNoMaterials({
   checkedState,
   handleCheckedChange,
   hoursState,
@@ -78,20 +78,13 @@ export default function CoursePurchaseSelections({
   const wrapperDiv = classNames(classes.checkboxAndRadio, classes.checkboxAndRadioHorizontal);
 
   const [disableTuition, setDisableTuition] = useState(true);
-  const [disableMaterial, setDisableMaterial] = useState(true);
 
   const toggleTuition = (event) => {
     if (event.target.value > 0) {
       setDisableTuition(false);
     } else {
       setDisableTuition(true);
-      setCheckedState({ ...checkedState, Tuition: false, Material: false });
-    }
-  };
-
-  const toggleMaterial = () => {
-    if (!checkedState.Tuition) {
-      setDisableMaterial(false);
+      setCheckedState({ ...checkedState, Tuition: false });
     }
   };
 
@@ -118,7 +111,6 @@ export default function CoursePurchaseSelections({
               disabled={customPaymentState.custompaymentformat > 0 || disableTuition}
               checked={checkedState.Tuition}
               onChange={(event) => {
-                toggleMaterial();
                 handleCheckedChange(event);
               }}
               name="Tuition"
@@ -128,21 +120,6 @@ export default function CoursePurchaseSelections({
             />
           }
           label="Tuition"
-          classes={{ label: classes.label }}
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              disabled={customPaymentState.custompaymentformat > 0 || disableTuition || disableMaterial}
-              checked={checkedState.Material && checkedState.Tuition}
-              onChange={handleCheckedChange}
-              name="Material"
-              checkedIcon={<Check className={classes.checkedIcon} />}
-              icon={<Check className={classes.uncheckedIcon} />}
-              classes={{ checked: classes.checked }}
-            />
-          }
-          label="Material"
           classes={{ label: classes.label }}
         />
         <FormControlLabel

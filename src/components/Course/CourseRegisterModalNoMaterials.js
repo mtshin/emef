@@ -16,7 +16,7 @@ import Close from "@material-ui/icons/Close";
 import Button from "components/CustomButtons/Button.js";
 import CourseEmailForm from "components/EmailForm/CourseEmailForm.js";
 import CoursePurchaseButton from "components/Course/CoursePurchaseButton.js";
-import CoursePurchaseSelections from "components/Course/CoursePurchaseSelections.js";
+import CoursePurchaseSelectionsNoMaterials from "components/Course/CoursePurchaseSelectionsNoMaterials.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/javascriptStyles.js";
 
@@ -28,19 +28,11 @@ Transition.displayName = "Transition";
 
 const useStyles = makeStyles(styles);
 
-export default function CourseRegisterModal({
-  modal,
-  setModal,
-  courseName,
-  courseTuition,
-  courseRegistration,
-  courseMaterial
-}) {
+export default function CourseRegisterModal({ modal, setModal, courseName, courseTuition, courseRegistration }) {
   const classes = useStyles();
   const [checkedState, setCheckedState] = useState({
     Tuition: false,
-    Registration: false,
-    Material: false
+    Registration: false
   });
 
   const [hoursState, setHoursState] = useState({ hoursformat: "" });
@@ -70,19 +62,11 @@ export default function CourseRegisterModal({
 
     if (customPaymentState.custompaymentformat <= 0) {
       if (checkedState.Tuition && hoursState.hoursformat > 0 && checkedState.Registration) {
-        if (checkedState.Material) {
-          amount = (courseTuition + courseMaterial) * hoursState.hoursformat + courseRegistration;
-        } else {
-          amount = courseTuition * hoursState.hoursformat + courseRegistration;
-        }
+        amount = courseTuition * hoursState.hoursformat + courseRegistration;
       } else if (checkedState.Registration && !checkedState.Tuition) {
         amount = courseRegistration;
       } else if (checkedState.Tuition && hoursState.hoursformat > 0 && !checkedState.Registration) {
-        if (checkedState.Material) {
-          amount = (courseTuition + courseMaterial) * hoursState.hoursformat;
-        } else {
-          amount = courseTuition * hoursState.hoursformat;
-        }
+        amount = courseTuition * hoursState.hoursformat;
       }
     } else {
       amount = customPaymentState.custompaymentformat;
@@ -94,8 +78,7 @@ export default function CourseRegisterModal({
   const resetPaymentStates = () => {
     setCheckedState({
       Tuition: false,
-      Registration: false,
-      Material: false
+      Registration: false
     });
     setHoursState({ hoursformat: "" });
     setCustomPaymentState({ custompaymentformat: "" });
@@ -159,9 +142,9 @@ export default function CourseRegisterModal({
         </p>
 
         <p>
-          <b>Please enter desired class hours for tuition/material fees and select payment(s):</b>
+          <b>Please enter desired class hours for tuition and select payment(s):</b>
         </p>
-        <CoursePurchaseSelections
+        <CoursePurchaseSelectionsNoMaterials
           checkedState={checkedState}
           handleCheckedChange={handleCheckedChange}
           hoursState={hoursState}

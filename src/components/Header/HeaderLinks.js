@@ -37,6 +37,9 @@ export default function HeaderLinks(props) {
             <Link to="/eas" className={classes.dropdownLink}>
               EAS
             </Link>,
+            <Link to="/eamcs" className={classes.dropdownLink}>
+              EAMCS
+            </Link>,
             <Link to="/profile-page" className={classes.dropdownLink}>
               Profile page example
             </Link>,

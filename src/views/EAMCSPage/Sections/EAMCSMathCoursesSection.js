@@ -6,44 +6,44 @@ import { makeStyles } from "@material-ui/core/styles";
 import SaveAlt from "@material-ui/icons/SaveAlt";
 
 // core components
-import AdultCourses from "../Courses/AdultCourses";
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import KidCourses from "../Courses/KidCourses";
+import MathCoursesBasic from "../Courses/MathCoursesBasic";
 
 // docs
-import EASClassRegistrationForm from "assets/docs/EAS/EASClassRegistrationForm.pdf";
+import EAMCSClassRegistrationForm from "assets/docs/EAMCS/EAMCSClassRegistrationForm.pdf";
 import ScholarshipApplicationForm from "assets/docs/ScholarshipApplicationForm.pdf";
 import FinancialAidApplicationForm from "assets/docs/FinancialAidApplicationForm.pdf";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/aboutStyle.js";
+import MathCoursesAdvanced from "../Courses/MathCoursesAdvanced";
 
 const useStyles = makeStyles(styles);
 
-export default function EASCoursesSection() {
+export default function EAMCSMathCoursesSection() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Classes</h2>
+          <h2 className={classes.title}>Math Classes</h2>
           <h4 className={classes.description}>
-            We offer a variety of art classes for all age groups or niche purposes. Check out our catalog below! If you have
-            an inquiry for a class not listed please do not hesitate to contact us. You can also apply for a scholarship
-            and/or financial aid with the corresponding forms below.
+            Math classes for all levels focused for school, standardized exam prep (incl. Reading & Writing), or overall
+            problem solving. If you have an inquiry for a class not listed please do not hesitate to contact us. You can also
+            apply for a scholarship and/or financial aid with the corresponding forms below.
           </h4>
         </GridItem>
         <GridItem cs={12} sm={12} md={8}>
           <a
-            href={EASClassRegistrationForm}
-            download="EASClassRegistrationForm.pdf"
+            href={EAMCSClassRegistrationForm}
+            download="EAMCSClassRegistrationForm.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button round color="info">
               <SaveAlt />
-              EAS Class Registration Form
+              EAMCS Class Registration Form
             </Button>
           </a>
           <a
@@ -70,8 +70,8 @@ export default function EASCoursesSection() {
             </Button>
           </a>
         </GridItem>
-        <KidCourses />
-        <AdultCourses />
+        <MathCoursesBasic />
+        <MathCoursesAdvanced />
       </GridContainer>
     </div>
   );
