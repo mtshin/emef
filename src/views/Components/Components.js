@@ -26,7 +26,6 @@ import SectionCarousel from "./Sections/SectionCarousel.js";
 import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
-import SectionDownload from "./Sections/SectionDownload.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -54,9 +53,7 @@ export default function Components(props) {
             <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>Material Kit React.</h1>
-                <h3 className={classes.subtitle}>
-                  A Badass Material-UI Kit based on Material Design.
-                </h3>
+                <h3 className={classes.subtitle}>A Badass Material-UI Kit based on Material Design.</h3>
               </div>
             </GridItem>
           </GridContainer>
@@ -82,7 +79,6 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionExamples />
-        <SectionDownload />
       </div>
       <Footer />
     </div>

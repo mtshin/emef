@@ -1,19 +1,3 @@
-/*!
-
- =========================================================
- * Material Kit React - v1.9.0 based on Material Kit - v2.0.2
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/material-kit-react
- * Copyright 2020 Creative Tim (https://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-kit-react/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
 // ##############################
 // // // Variables - Styles that are used on more than one component
 // #############################
@@ -48,8 +32,7 @@ const container = {
 };
 
 const boxShadow = {
-  boxShadow:
-    "0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+  boxShadow: "0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
 };
 
 const card = {
@@ -98,8 +81,7 @@ const dangerBoxShadow = {
     "0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2)"
 };
 const roseBoxShadow = {
-  boxShadow:
-    "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
+  boxShadow: "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
 };
 
 const warningCardHeader = {
@@ -149,8 +131,7 @@ const cardHeader = {
 const defaultBoxShadow = {
   border: "0",
   borderRadius: "3px",
-  boxShadow:
-    "0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
+  boxShadow: "0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   padding: "10px 0",
   transition: "all 150ms ease 0s"
 };

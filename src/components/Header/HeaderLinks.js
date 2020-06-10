@@ -43,23 +43,14 @@ export default function HeaderLinks(props) {
             <Link to="/profile-page" className={classes.dropdownLink}>
               Profile page example
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
+            <a href="https://github.com/mtshin/emef" target="_blank" className={classes.dropdownLink}>
               Documentation
             </a>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
+        <Button href="https://github.com/mtshin/emef" color="transparent" target="_blank" className={classes.navLink}>
           <CloudDownload className={classes.icons} /> Download
         </Button>
       </ListItem>
@@ -75,12 +66,7 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
+          <Button href="https://github.com/mtshin/emef" target="_blank" color="transparent" className={classes.navLink}>
             <i className={classes.socialIcons + " fab fa-twitter"} />
           </Button>
         </Tooltip>
@@ -92,12 +78,7 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
+          <Button color="transparent" href="https://github.com/mtshin/emef" target="_blank" className={classes.navLink}>
             <i className={classes.socialIcons + " fab fa-facebook"} />
           </Button>
         </Tooltip>
@@ -109,12 +90,7 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
+          <Button color="transparent" href="https://github.com/mtshin/emef" target="_blank" className={classes.navLink}>
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
