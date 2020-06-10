@@ -11,7 +11,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import ResponsiveGallery from "components/Gallery/ResponsiveGallery";
-import { studioPhotos } from "assets/img/gallery/studioPhotos";
+import { studioPhotos } from "assets/img/gallery/EASStudio/studioPhotos";
 
 import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
@@ -33,11 +33,7 @@ export default function EASStudioGallery(props) {
         }}
         {...rest}
       />
-      <Parallax
-        extraSmall
-        filter
-        image={require("assets/img/profile-bg.jpg")}
-      />
+      <Parallax extraSmall filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <div className={classes.section}>
@@ -45,9 +41,8 @@ export default function EASStudioGallery(props) {
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Studio Gallery</h2>
                 <h5 className={classes.description}>
-                  All images shown are works done by our instructors at the EAS
-                  studio. Feel free to contact us if you are interested in a
-                  commision or purchase!
+                  All images shown are works done by our instructors at the EAS studio. Feel free to contact us if you are
+                  interested in a commision or purchase!
                 </h5>
               </GridItem>
             </GridContainer>

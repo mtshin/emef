@@ -16,6 +16,7 @@ import LoginPage from "views/LoginPage/LoginPage.js";
 import EASPage from "views/EASPage/EASPage.js";
 import EAMCSPage from "views/EAMCSPage/EAMCSPage.js";
 import EASStudioGallery from "views/EASPage/Galleries/EASStudioGallery.js";
+import EASStudentGallery from "views/EASPage/Galleries/EASStudentGallery.js";
 
 var hist = createBrowserHistory();
 
@@ -23,14 +24,15 @@ ReactDOM.render(
   <SnackbarProvider maxSnack={3}>
     <Router history={hist}>
       <Switch>
-        <Route path="/landing-page" component={LandingPage} />
-        <Route path="/profile-page" component={ProfilePage} />
-        <Route path="/login-page" component={LoginPage} />
-        <Route path="/components" component={Components} />
-        <Route path="/eas/studioGallery" component={EASStudioGallery} />
-        <Route path="/eas" component={EASPage} />
-        <Route path="/eamcs" component={EAMCSPage} />
-        <Route path="/" component={LandingPage} />
+        <Route path="/landing-page" exact component={LandingPage} />
+        <Route path="/profile-page" exact component={ProfilePage} />
+        <Route path="/login-page" exact component={LoginPage} />
+        <Route path="/components" exact component={Components} />
+        <Route path="/eas/studioGallery" exact component={EASStudioGallery} />
+        <Route path="/eas/studentGallery" exact component={EASStudentGallery} />
+        <Route path="/eas" exact component={EASPage} />
+        <Route path="/eamcs" exact component={EAMCSPage} />
+        <Route path="/" exact component={LandingPage} />
       </Switch>
     </Router>
   </SnackbarProvider>,

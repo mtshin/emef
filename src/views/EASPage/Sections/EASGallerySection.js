@@ -67,9 +67,9 @@ export default function EASGallerySection() {
                 }}
               >
                 <h4 className={cardClasses.cardTitle}>Studio Gallery</h4>
-                <p>Works done by our EAS instructors. Available for commisions or sale!</p>
+                <p>Works done by our EAS instructors. Please inquire for commissions or purchase!</p>
                 <Button component={Link} to="/eas/studioGallery" color="primary">
-                  Visit EAS
+                  View Studio Gallery
                 </Button>
               </CardBody>
             </Card>
@@ -85,12 +85,11 @@ export default function EASGallerySection() {
               <CardBody
                 style={{ height: "100%", width: "100%", display: "flex", justifyContent: "center", flexDirection: "column" }}
               >
-                <h4 className={cardClasses.cardTitle}>Evergreen Academy of Math and Computer Science</h4>
-                <p>
-                  Offers a test mastery based approach to learning technical skills in the world of Math and Computer
-                  Science.
-                </p>
-                <Button color="primary">Visit EAMCS</Button>
+                <h4 className={cardClasses.cardTitle}>Student Gallery</h4>
+                <p>Works done by our students in EAS classes.</p>
+                <Button component={Link} to="/eas/studentGallery" color="primary">
+                  View Studio Gallery
+                </Button>
               </CardBody>
             </Card>
           </GridItem>
