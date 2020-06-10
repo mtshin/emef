@@ -24,7 +24,7 @@ export default function EASStudioGallery(props) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
+        brand="EMEF"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -40,10 +40,10 @@ export default function EASStudioGallery(props) {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Studio Gallery</h2>
-                <h5 className={classes.description}>
+                <h4 className={classes.description}>
                   All images shown are works done by our instructors at the EAS studio. Feel free to contact us if you are
                   interested in a commision or purchase!
-                </h5>
+                </h4>
               </GridItem>
             </GridContainer>
           </div>

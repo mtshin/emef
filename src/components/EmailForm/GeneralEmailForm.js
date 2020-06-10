@@ -88,7 +88,7 @@ export default function GeneralEmailForm() {
       .send(serviceId, templateId, variables, userId)
       .then(() => {
         // Email successfully sent alert
-        enqueueSnackbar("Form successfully sent!", {
+        enqueueSnackbar("Form successfully sent, we'll get back to you soon!", {
           variant: "success",
           autoHideDuration: 5000
         });

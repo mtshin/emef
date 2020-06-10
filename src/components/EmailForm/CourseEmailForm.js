@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // react component plugin for creating datetime dropdown picker
-import Datetime from "react-datetime";
+import DateTime from "react-datetime";
 
 // @material-ui/core components
 import FormControl from "@material-ui/core/FormControl";
@@ -128,7 +128,7 @@ export default function CourseEmailForm({ courseName }) {
       .send(serviceId, templateId, variables, userId)
       .then(() => {
         // Email successfully sent alert
-        enqueueSnackbar("Form successfully sent!", {
+        enqueueSnackbar("Form successfully sent, we'll get back to you soon!", {
           variant: "success",
           autoHideDuration: 5000
         });
@@ -145,7 +145,7 @@ export default function CourseEmailForm({ courseName }) {
   const classes = useStyles();
 
   // Define valid start/end date by forcing earliest as today for Datetime component
-  const yesterday = Datetime.moment().subtract(1, "day");
+  const yesterday = DateTime.moment().subtract(1, "day");
   const valid = (current) => {
     return current.isAfter(yesterday);
   };
@@ -185,7 +185,7 @@ export default function CourseEmailForm({ courseName }) {
           <FormControl fullWidth>
             <InputLabel shrink>Start Date *</InputLabel>
             <br />
-            <Datetime
+            <DateTime
               inputProps={{ placeholder: "Choose a start date", readOnly: true }}
               onChange={(event) => startDateChange(event)}
               isValidDate={valid}
@@ -198,7 +198,7 @@ export default function CourseEmailForm({ courseName }) {
           <FormControl fullWidth>
             <InputLabel shrink>End Date *</InputLabel>
             <br />
-            <Datetime
+            <DateTime
               inputProps={{ placeholder: "Choose an end date", readOnly: true }}
               onChange={(event) => endDateChange(event)}
               isValidDate={valid}

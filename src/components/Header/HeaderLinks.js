@@ -10,7 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Code, Eco, Palette } from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -27,71 +27,133 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Components"
+          buttonText="EMEF"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={Apps}
+          buttonIcon={Eco}
           dropdownList={[
-            <Link to="/eas" className={classes.dropdownLink}>
-              EAS
-            </Link>,
-            <Link to="/eamcs" className={classes.dropdownLink}>
-              EAMCS
-            </Link>,
-            <Link to="/profile-page" className={classes.dropdownLink}>
-              Profile page example
-            </Link>,
-            <a href="https://github.com/mtshin/emef" target="_blank" className={classes.dropdownLink}>
-              Documentation
-            </a>
+            <Tooltip
+              id="instagram-facebook"
+              title="EMEF Home"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button color="transparent" component={Link} to="/" className={classes.navLink}>
+                <i className={classes.socialIcons + " fa fa-tree"} />
+                &nbsp;EMEF Home
+              </Button>
+            </Tooltip>,
+            <Tooltip
+              id="instagram-facebook"
+              title="Follow EMEF on Facebook"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button
+                color="transparent"
+                href="https://www.facebook.com/EvergreenEducationFoundation"
+                target="_blank"
+                className={classes.navLink}
+              >
+                <i className={classes.socialIcons + " fab fa-facebook"} />
+                &nbsp;EMEF
+              </Button>
+            </Tooltip>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="https://github.com/mtshin/emef" color="transparent" target="_blank" className={classes.navLink}>
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
+        <CustomDropdown
+          noLiPadding
+          buttonText="EAS"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Palette}
+          dropdownList={[
+            <Tooltip
+              id="instagram-facebook"
+              title="EAS Home"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button color="transparent" component={Link} to="/eas" className={classes.navLink}>
+                <i className={classes.socialIcons + " fa fa-paint-brush"} />
+                &nbsp;EAS Home
+              </Button>
+            </Tooltip>,
+            <Tooltip
+              id="instagram-facebook"
+              title="Follow EAS on Facebook"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button
+                color="transparent"
+                href="https://www.facebook.com/easemef/"
+                target="_blank"
+                className={classes.navLink}
+              >
+                <i className={classes.socialIcons + " fab fa-facebook"} />
+                &nbsp;EAS
+              </Button>
+            </Tooltip>
+          ]}
+        />
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button href="https://github.com/mtshin/emef" target="_blank" color="transparent" className={classes.navLink}>
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button color="transparent" href="https://github.com/mtshin/emef" target="_blank" className={classes.navLink}>
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
+        <CustomDropdown
+          noLiPadding
+          buttonText="EAMCS"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={Code}
+          dropdownList={[
+            <Tooltip
+              id="instagram-facebook"
+              title="EAMCS Home"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button color="transparent" component={Link} to="/eamcs" className={classes.navLink}>
+                <i className={classes.socialIcons + " fa fa-calculator"} />
+                &nbsp;EAMCS Home
+              </Button>
+            </Tooltip>,
+            <Tooltip
+              id="instagram-facebook"
+              title="Follow EAMCS on Facebook"
+              placement={window.innerWidth > 959 ? "top" : "left"}
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button
+                color="transparent"
+                href="https://www.facebook.com/EvergreenMath"
+                target="_blank"
+                className={classes.navLink}
+              >
+                <i className={classes.socialIcons + " fab fa-facebook"} />
+                &nbsp;EAMCS
+              </Button>
+            </Tooltip>
+          ]}
+        />
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title="Work with us"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button color="transparent" href="https://github.com/mtshin/emef" target="_blank" className={classes.navLink}>
-            <i className={classes.socialIcons + " fab fa-instagram"} />
+          <Button color="transparent" component={Link} to="/employment" className={classes.navLink}>
+            <i className={classes.socialIcons + " fa fa-handshake"} />
+            &nbsp;Employment
           </Button>
         </Tooltip>
       </ListItem>

@@ -105,7 +105,9 @@ export default function BusinessSection() {
                   Offers a test mastery based approach to learning technical skills in the world of Math and Computer
                   Science.
                 </p>
-                <Button color="primary">Visit EAMCS</Button>
+                <Button component={Link} to="/eamcs" color="primary">
+                  Visit EAMCS
+                </Button>
               </CardBody>
             </Card>
           </GridItem>

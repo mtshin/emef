@@ -37,17 +37,13 @@ const useStyles = makeStyles(styles);
 export default function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+  const imageClasses = classNames(classes.imgRaised, classes.imgRoundedCircle, classes.imgFluid);
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
       <Header
         color="transparent"
-        brand="Material Kit React"
+        brand="Material UI"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -84,10 +80,9 @@ export default function ProfilePage(props) {
             </GridContainer>
             <div className={classes.description}>
               <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
+                An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy
+                — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove
+                structure.{" "}
               </p>
             </div>
             <GridContainer justify="center">
@@ -102,28 +97,12 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={studio1} className={navImageClasses} />
+                            <img alt="..." src={studio2} className={navImageClasses} />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio5}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={studio5} className={navImageClasses} />
+                            <img alt="..." src={studio4} className={navImageClasses} />
                           </GridItem>
                         </GridContainer>
                       )
@@ -134,33 +113,13 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={work1} className={navImageClasses} />
+                            <img alt="..." src={work2} className={navImageClasses} />
+                            <img alt="..." src={work3} className={navImageClasses} />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={work4} className={navImageClasses} />
+                            <img alt="..." src={work5} className={navImageClasses} />
                           </GridItem>
                         </GridContainer>
                       )
@@ -171,33 +130,13 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio3}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={work4} className={navImageClasses} />
+                            <img alt="..." src={studio3} className={navImageClasses} />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
+                            <img alt="..." src={work2} className={navImageClasses} />
+                            <img alt="..." src={work1} className={navImageClasses} />
+                            <img alt="..." src={studio1} className={navImageClasses} />
                           </GridItem>
                         </GridContainer>
                       )

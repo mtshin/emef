@@ -17,6 +17,7 @@ import EASPage from "views/EASPage/EASPage.js";
 import EAMCSPage from "views/EAMCSPage/EAMCSPage.js";
 import EASStudioGallery from "views/EASPage/Galleries/EASStudioGallery.js";
 import EASStudentGallery from "views/EASPage/Galleries/EASStudentGallery.js";
+import Employment from "views/EmploymentPage/Employment.js";
 
 var hist = createBrowserHistory();
 
@@ -24,6 +25,7 @@ ReactDOM.render(
   <SnackbarProvider maxSnack={3}>
     <Router history={hist}>
       <Switch>
+        <Route path="/employment" exact component={Employment} />
         <Route path="/landing-page" exact component={LandingPage} />
         <Route path="/profile-page" exact component={ProfilePage} />
         <Route path="/login-page" exact component={LoginPage} />
