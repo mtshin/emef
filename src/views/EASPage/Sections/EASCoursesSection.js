@@ -53,7 +53,6 @@ export default function EASCoursesSection() {
             download="ScholarshipApplicationForm.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.buttonSidePadding}
           >
             <Button round color="info">
               <SaveAlt />

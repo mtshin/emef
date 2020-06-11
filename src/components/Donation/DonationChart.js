@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { PieChart, Pie, ResponsiveContainer, Tooltip } from "recharts";
 
@@ -13,7 +13,17 @@ const data = [
 ];
 
 export default function DonationChart() {
-  return (
+  const [windowWidth, setWindowWIdth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWIdth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return windowWidth >= 768 ? (
     <ResponsiveContainer height={250} width="100%">
       <PieChart>
         <Pie
@@ -22,16 +32,9 @@ export default function DonationChart() {
           cy="50%"
           outerRadius={100}
           fill="#a132ac"
+          labelLine={true}
           dataKey="value"
-          label={({
-            cx,
-            cy,
-            midAngle,
-            innerRadius,
-            outerRadius,
-            value,
-            index
-          }) => {
+          label={({ cx, cy, midAngle, innerRadius, outerRadius, value, index }) => {
             const RADIAN = Math.PI / 180;
             // eslint-disable-next-line
             const radius = 25 + innerRadius + (outerRadius - innerRadius);
@@ -41,18 +44,19 @@ export default function DonationChart() {
             const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
             return (
-              <text
-                x={x}
-                y={y}
-                fill="#a132ac"
-                textAnchor={x > cx ? "start" : "end"}
-                dominantBaseline="central"
-              >
+              <text x={x} y={y} fill="#a132ac" textAnchor={x > cx ? "start" : "end"} dominantBaseline="central">
                 {data[index].name} ({value}%)
               </text>
             );
           }}
         />
+        <Tooltip formatter={(value) => value + "%"} />
+      </PieChart>
+    </ResponsiveContainer>
+  ) : (
+    <ResponsiveContainer height={250} width="100%">
+      <PieChart>
+        <Pie data={data} cx="50%" cy="50%" outerRadius={100} fill="#a132ac" dataKey="value" labelLine={false} />
         <Tooltip formatter={(value) => value + "%"} />
       </PieChart>
     </ResponsiveContainer>
