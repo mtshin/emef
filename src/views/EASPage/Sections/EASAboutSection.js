@@ -34,13 +34,17 @@ export default function EASAboutSection() {
           </h4>
         </GridItem>
       </GridContainer>
-      <VideoPlayer
-        url="https://www.facebook.com/EvergreenMath/videos/3054184684624671/"
-        width="65%"
-        height="65%"
-        controls={true}
-        style={{ paddingTop: "3rem" }}
-      />
+      <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={8}>
+          <VideoPlayer
+            url="https://www.facebook.com/EvergreenMath/videos/3054184684624671/"
+            width="100%"
+            height="100%"
+            controls={true}
+            style={{ paddingTop: "3rem" }}
+          />
+        </GridItem>
+      </GridContainer>
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>

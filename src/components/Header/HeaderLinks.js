@@ -40,7 +40,7 @@ export default function HeaderLinks(props) {
               placement={window.innerWidth > 959 ? "top" : "left"}
               classes={{ tooltip: classes.tooltip }}
             >
-              <Button color="transparent" component={Link} to="/" className={classes.navLink}>
+              <Button color="transparent" component={Link} to="/" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-tree"} />
                 &nbsp;EMEF Home
               </Button>
@@ -56,9 +56,10 @@ export default function HeaderLinks(props) {
                 href="https://www.facebook.com/EvergreenEducationFoundation"
                 target="_blank"
                 className={classes.navLink}
+                fullWidth
               >
                 <i className={classes.socialIcons + " fab fa-facebook"} />
-                &nbsp;EMEF
+                &nbsp; Follow EMEF
               </Button>
             </Tooltip>
           ]}
@@ -80,7 +81,7 @@ export default function HeaderLinks(props) {
               placement={window.innerWidth > 959 ? "top" : "left"}
               classes={{ tooltip: classes.tooltip }}
             >
-              <Button color="transparent" component={Link} to="/eas" className={classes.navLink}>
+              <Button color="transparent" component={Link} to="/eas" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-paint-brush"} />
                 &nbsp;EAS Home
               </Button>
@@ -96,9 +97,10 @@ export default function HeaderLinks(props) {
                 href="https://www.facebook.com/easemef/"
                 target="_blank"
                 className={classes.navLink}
+                fullWidth
               >
                 <i className={classes.socialIcons + " fab fa-facebook"} />
-                &nbsp;EAS
+                &nbsp;Follow EAS
               </Button>
             </Tooltip>
           ]}
@@ -120,7 +122,7 @@ export default function HeaderLinks(props) {
               placement={window.innerWidth > 959 ? "top" : "left"}
               classes={{ tooltip: classes.tooltip }}
             >
-              <Button color="transparent" component={Link} to="/eamcs" className={classes.navLink}>
+              <Button color="transparent" component={Link} to="/eamcs" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-calculator"} />
                 &nbsp;EAMCS Home
               </Button>
@@ -136,9 +138,10 @@ export default function HeaderLinks(props) {
                 href="https://www.facebook.com/EvergreenMath"
                 target="_blank"
                 className={classes.navLink}
+                fullWidth
               >
                 <i className={classes.socialIcons + " fab fa-facebook"} />
-                &nbsp;EAMCS
+                &nbsp;Follow EAMCS
               </Button>
             </Tooltip>
           ]}
@@ -151,7 +154,7 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button color="transparent" component={Link} to="/employment" className={classes.navLink}>
+          <Button color="transparent" component={Link} to="/employment" className={classes.navLink} fullWidth>
             <i className={classes.socialIcons + " fa fa-handshake"} />
             &nbsp;Employment
           </Button>

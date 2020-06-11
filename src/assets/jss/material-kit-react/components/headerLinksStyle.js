@@ -2,7 +2,7 @@ import { defaultFont } from "assets/jss/material-kit-react.js";
 
 import tooltip from "assets/jss/material-kit-react/tooltipsStyle.js";
 
-const headerLinksStyle = theme => ({
+const headerLinksStyle = (theme) => ({
   list: {
     ...defaultFont,
     fontSize: "14px",
@@ -111,6 +111,9 @@ const headerLinksStyle = theme => ({
   ...tooltip,
   marginRight5: {
     marginRight: "5px"
+  },
+  stretchHeaderLinks: {
+    display: "flex"
   }
 });
 
