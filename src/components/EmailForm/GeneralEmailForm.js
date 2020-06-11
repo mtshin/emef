@@ -64,8 +64,8 @@ export default function GeneralEmailForm() {
 
     //This templateId is created in EmailJS.com
     const serviceId = "gmail";
-    const templateId = "template_bj5jj4C5";
-    const userId = "user_Lj8b6KG37nt5rEVTL7Cy1";
+    const templateId = `${process.env.REACT_APP_GENERAL_EMAIL_TEMPLATE_ID}`;
+    const userId = `${process.env.REACT_APP_EMAILJS_USER_ID}`;
 
     //This is a custom method from EmailJS that takes the information
     //from the form and sends the email with the information gathered

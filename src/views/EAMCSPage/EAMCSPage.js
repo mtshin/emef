@@ -22,7 +22,7 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import EAMCSAboutSection from "./Sections/EAMCSAboutSection.js";
 import EAMCSMathCoursesSection from "./Sections/EAMCSMathCoursesSection.js";
 import EAMCSCSCoursesSection from "./Sections/EAMCSCSCoursesSection.js";
-import EAMCSRegisterSection from "./Sections/EAMCSRegisterSection.js";
+// import EAMCSRegisterSection from "./Sections/EAMCSRegisterSection.js";
 import EAMCSStandardizedExamCoursesSection from "./Sections/EAMCSStandardizedExamCoursesSection.js";
 
 const dashboardRoutes = [];
@@ -50,11 +50,8 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>EAMCS.</h1>
-              <h4>
-                Every landing page needs a small description after the big bold title, that{"'"}s why we added this text
-                here. Add here all the information that can make you or your product create the first impression.
-              </h4>
+              <h1 className={classes.title}>Evergreen Academy of Math & Computer Science</h1>
+              <h4>{/* EAMCS landing page desc filler */}</h4>
             </GridItem>
           </GridContainer>
           <EAMCSLandingPageCarousel />
@@ -67,7 +64,7 @@ export default function LandingPage(props) {
           <EAMCSMathCoursesSection />
           <EAMCSStandardizedExamCoursesSection />
           <EAMCSCSCoursesSection />
-          <EAMCSRegisterSection />
+          {/* <EAMCSRegisterSection /> */}
         </div>
       </div>
       <Footer />

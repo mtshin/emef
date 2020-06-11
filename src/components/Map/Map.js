@@ -3,12 +3,7 @@ import React, { useState } from "react";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import {
-  GoogleMapProvider,
-  InfoWindow,
-  MapBox,
-  Marker
-} from "@googlemap-react/core";
+import { GoogleMapProvider, InfoWindow, MapBox, Marker } from "@googlemap-react/core";
 
 export default function SectionMap() {
   const [infoDisplay, setInfoDisplay] = useState(true);
@@ -18,13 +13,15 @@ export default function SectionMap() {
     setInfoDisplay(!infoDisplay);
   };
 
+  const mapsApiKey = `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`;
+
   return (
     <GridContainer justify="center">
       <GridItem xs={12} sm={12} md={8}>
         <Card>
           <GoogleMapProvider>
             <MapBox
-              apiKey="AIzaSyBtYGqlQmwryHy05rxSfrwDZbb86xy2xQg"
+              apiKey={mapsApiKey}
               opts={{
                 center: { lat: 42.133763, lng: -70.908446 },
                 zoom: 11
@@ -37,9 +34,6 @@ export default function SectionMap() {
               useGeometry
               usePlaces
               useVisualization
-              onCenterChanged={() => {
-                console.log("The center of the map has changed.");
-              }}
             />
             <Marker
               id="marker"

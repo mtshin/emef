@@ -100,8 +100,8 @@ export default function CourseEmailForm({ courseName }) {
 
     //This templateId is created in EmailJS.com
     const serviceId = "gmail";
-    const templateId = "class_template";
-    const userId = "user_Lj8b6KG37nt5rEVTL7Cy1";
+    const templateId = `${process.env.REACT_APP_COURSE_EMAIL_TEMPLATE_ID}`;
+    const userId = `${process.env.REACT_APP_EMAILJS_USER_ID}`;
 
     //This is a custom method from EmailJS that takes the information
     //from the form and sends the email with the information gathered
