@@ -46,6 +46,8 @@ export default function EASCoursesSection() {
               EAS Class Registration Form
             </Button>
           </a>
+        </GridItem>
+        <GridItem cs={12} sm={12} md={8}>
           <a
             href={ScholarshipApplicationForm}
             download="ScholarshipApplicationForm.pdf"
@@ -58,6 +60,8 @@ export default function EASCoursesSection() {
               Scholarship Application Form
             </Button>
           </a>
+        </GridItem>
+        <GridItem cs={12} sm={12} md={8}>
           <a
             href={FinancialAidApplicationForm}
             download="FinancialAidApplicationForm.pdf"

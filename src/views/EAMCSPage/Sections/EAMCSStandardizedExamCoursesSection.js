@@ -45,6 +45,8 @@ export default function EAMCSStandardizedExamCoursesSection() {
               EAMCS Class Registration Form
             </Button>
           </a>
+        </GridItem>
+        <GridItem cs={12} sm={12} md={8}>
           <a
             href={ScholarshipApplicationForm}
             download="ScholarshipApplicationForm.pdf"
@@ -57,6 +59,8 @@ export default function EAMCSStandardizedExamCoursesSection() {
               Scholarship Application Form
             </Button>
           </a>
+        </GridItem>
+        <GridItem cs={12} sm={12} md={8}>
           <a
             href={FinancialAidApplicationForm}
             download="FinancialAidApplicationForm.pdf"
