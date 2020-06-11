@@ -14,14 +14,7 @@ const VideoPlayer = ({ url, width, height, controls, style }) => {
         justifyContent: "center"
       }}
     >
-      <ReactPlayer
-        className="react-player"
-        url={url}
-        width={width}
-        height={height}
-        controls={controls}
-        style={style}
-      />
+      <ReactPlayer className="react-player" url={url} width={width} height={height} controls={controls} style={style} />
     </div>
   );
 };
