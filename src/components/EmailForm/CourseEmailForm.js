@@ -184,20 +184,20 @@ export default function CourseEmailForm({ courseName }) {
         <GridItem xs={12} sm={12} md={6}>
           <FormControl fullWidth>
             <InputLabel shrink>Start Date *</InputLabel>
-            <br />
+            <p />
             <DateTime
               inputProps={{ placeholder: "Choose a start date", readOnly: true }}
               onChange={(event) => startDateChange(event)}
               isValidDate={valid}
               timeFormat={false}
             />
-            <br />
+            <p />
           </FormControl>
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <FormControl fullWidth>
             <InputLabel shrink>End Date *</InputLabel>
-            <br />
+            <p />
             <DateTime
               inputProps={{ placeholder: "Choose an end date", readOnly: true }}
               onChange={(event) => endDateChange(event)}
