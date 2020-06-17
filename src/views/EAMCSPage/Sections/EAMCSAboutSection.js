@@ -37,7 +37,7 @@ export default function EAMCSAboutSection() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <VideoPlayer
-            url="https://www.facebook.com/EvergreenMath/videos/3115002501878985/"
+            url="https://www.facebook.com/EvergreenMath/videos/272982913810686/"
             width="100%"
             height="100%"
             controls={true}
