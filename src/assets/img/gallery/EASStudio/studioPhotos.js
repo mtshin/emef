@@ -1,4 +1,4 @@
-import ducksRiver from "assets/img/gallery/EASStudio/ducks_river_compressed_lossless.jpg";
+import ducksRiver from "assets/img/gallery/EASStudio/ducks_river_compressed_lossy.jpg";
 
 export const studioPhotos = [
   {
