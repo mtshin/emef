@@ -1,4 +1,6 @@
 import React from "react";
+// Load EAS Paypal script
+import usePaypalScript from "hooks/usePaypalScript.js";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -29,6 +31,7 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
+  usePaypalScript(process.env.REACT_APP_PAYPAL_EAS_API_KEY);
   const classes = useStyles();
   const { ...rest } = props;
   return (

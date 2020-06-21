@@ -60,7 +60,7 @@ export default function SectionMap() {
                 (617) 454-4347
                 <br />
                 <a
-                  href="https://www.google.com/maps/place/379+Liberty+St+STE+201A+%26+201C,+Springfield,+MA+01104/@42.1136996,-72.5885111,17z/data=!3m1!4b1!4m5!3m4!1s0x89e6e719f2b7779d:0xe16b7949cebfcd2a!8m2!3d42.1136956!4d-72.5863224"
+                  href="https://www.google.com/maps/place/379+Liberty+St,+Rockland,+MA+02370/@42.1337484,-70.9106487,17z/data=!3m1!4b1!4m5!3m4!1s0x89e49c2a6da9fc39:0xcf481db4c1cc7292!8m2!3d42.1337444!4d-70.90846"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
