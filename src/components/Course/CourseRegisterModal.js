@@ -34,7 +34,8 @@ export default function CourseRegisterModal({
   courseName,
   courseTuition,
   courseRegistration,
-  courseMaterial
+  courseMaterial,
+  easLegacyPurchaseOverride
 }) {
   const classes = useStyles();
   const [checkedState, setCheckedState] = useState({
@@ -171,15 +172,18 @@ export default function CourseRegisterModal({
           setCheckedState={setCheckedState}
         />
         <br />
-        <h5 className={classes.modalTitle}>
+        <h5 className={classes.modalTitle} id="totalPrice">
           <b>Total: ${calculateTotalAmount()}</b>
         </h5>
         <br />
         <p>
-          *<b>Venmo</b>: Ensure the app is connected to the browser you are using to purchase in Settings &gt; Connect
-          Browsers to see it as a payment option.
+          To purchase with Venmo, please ensure the app is configured properly by allowing{" "}
+          <a href="https://help.venmo.com/hc/en-us/articles/115010455987-Getting-Started-Purchasing-with-Venmo">
+            Enable Mobile Web Purchase or Connect Browsers
+          </a>
+          .
         </p>
-        <CoursePurchaseButton amount={calculateTotalAmount()} />
+        <CoursePurchaseButton amount={calculateTotalAmount()} easLegacyPurchaseOverride={easLegacyPurchaseOverride} />
       </DialogContent>
       <DialogActions className={classes.modalFooter}>
         <Button

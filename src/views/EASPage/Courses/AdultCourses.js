@@ -8,7 +8,7 @@ import Portrait from "@material-ui/icons/Portrait";
 
 // core components
 import Button from "components/CustomButtons/Button.js";
-import CourseCourseRegisterModal from "components/Course/CourseRegisterModal.js";
+import CourseRegisterModal from "components/Course/CourseRegisterModal.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
 
@@ -134,13 +134,14 @@ export default function AdultCourses() {
           }
         ]}
       />
-      <CourseCourseRegisterModal
+      <CourseRegisterModal
         modal={modal}
         setModal={setModal}
         courseName={courseInfo.courseName}
         courseTuition={courseInfo.courseTuition}
         courseRegistration={courseInfo.courseRegistration}
         courseMaterial={courseInfo.courseMaterial}
+        easLegacyPurchaseOverride={true}
       />
     </GridItem>
   );

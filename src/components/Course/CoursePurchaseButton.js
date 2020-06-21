@@ -5,12 +5,32 @@ import { PayPalButton } from "react-paypal-button-v2";
 // Snackbar notifications on successful transaction
 import { useSnackbar } from "notistack";
 
+// Custom components
+import Button from "components/CustomButtons/Button.js";
+
 // eslint-disable-next-line react/prop-types
-export default function CoursePurchaseButton({ amount }) {
+export default function CoursePurchaseButton({ amount, easLegacyPurchaseOverride }) {
   // snackbar notification state
   const { enqueueSnackbar } = useSnackbar();
+  const legacyEmailEAS = process.env.REACT_APP_PAYPAL_EAS_EMAIL;
 
-  return (
+  // Legacy Paypal button that allows for personal accounts to accept payments
+  const legacyPayButton = (
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value={legacyEmailEAS} />
+      <input type="hidden" name="lc" value="US" />
+      <input type="hidden" name="item_name" value="EAS Class Purchase" />
+      <input type="hidden" name="amount" value={amount} />
+      <input type="hidden" name="currency_code" value="USD" />
+      <input type="hidden" name="button_subtype" value="services" />
+      <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted" />
+      <Button color="primary" type="submit" name="submit" disabled={!amount}>
+        Purchase Class
+      </Button>
+    </form>
+  );
+  const smartPayButton = (
     <PayPalButton
       amount={amount}
       currency="USD"
@@ -42,4 +62,6 @@ export default function CoursePurchaseButton({ amount }) {
       }}
     />
   );
+
+  return easLegacyPurchaseOverride ? legacyPayButton : smartPayButton;
 }

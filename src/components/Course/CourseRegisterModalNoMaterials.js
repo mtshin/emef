@@ -159,8 +159,11 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
         </h5>
         <br />
         <p>
-          *<b>Venmo</b>: Ensure the app is connected to the browser you are using to purchase in Settings &gt; Connect
-          Browsers to see it as a payment option.
+          To purchase with Venmo, please ensure the app is configured properly by allowing{" "}
+          <a href="https://help.venmo.com/hc/en-us/articles/115010455987-Getting-Started-Purchasing-with-Venmo">
+            Enable Mobile Web Purchase or Connect Browsers
+          </a>
+          .
         </p>
         <CoursePurchaseButton amount={calculateTotalAmount()} />
       </DialogContent>
