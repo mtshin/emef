@@ -9,16 +9,22 @@ import { useSnackbar } from "notistack";
 import Button from "components/CustomButtons/Button.js";
 
 // eslint-disable-next-line react/prop-types
-export default function CoursePurchaseButton({ amount, easLegacyPurchaseOverride }) {
+export default function CoursePurchaseButton({ amount, easLegacyPurchaseOverride, eamcsLegacyPurchaseOverride }) {
   // snackbar notification state
   const { enqueueSnackbar } = useSnackbar();
-  const legacyEmailEAS = process.env.REACT_APP_PAYPAL_EAS_EMAIL;
+  const legacyEmail = () => {
+    if (easLegacyPurchaseOverride) {
+      return process.env.REACT_APP_PAYPAL_EAS_EMAIL;
+    } else if (eamcsLegacyPurchaseOverride) {
+      return process.env.REACT_APP_PAYPAL_EAMCS_EMAIL;
+    }
+  };
 
   // Legacy Paypal button that allows for personal accounts to accept payments
   const legacyPayButton = (
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value={legacyEmailEAS} />
+      <input type="hidden" name="business" value={legacyEmail()} />
       <input type="hidden" name="lc" value="US" />
       <input type="hidden" name="item_name" value="EAS Class Purchase" />
       <input type="hidden" name="amount" value={amount} />
@@ -63,5 +69,5 @@ export default function CoursePurchaseButton({ amount, easLegacyPurchaseOverride
     />
   );
 
-  return easLegacyPurchaseOverride ? legacyPayButton : smartPayButton;
+  return easLegacyPurchaseOverride || eamcsLegacyPurchaseOverride ? legacyPayButton : smartPayButton;
 }

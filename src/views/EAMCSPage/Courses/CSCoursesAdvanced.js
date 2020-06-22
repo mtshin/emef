@@ -189,6 +189,7 @@ export default function CSCoursesAdvanced() {
         courseName={courseInfo.courseName}
         courseTuition={courseInfo.courseTuition}
         courseRegistration={courseInfo.courseRegistration}
+        eamcsLegacyPurchaseOverride={true}
       />
     </GridItem>
   );

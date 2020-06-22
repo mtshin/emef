@@ -32,7 +32,7 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function LandingPage(props) {
-  usePaypalScript(process.env.REACT_APP_PAYPAL_API_KEY);
+  usePaypalScript(process.env.REACT_APP_PAYPAL_EAMCS_API_KEY); // TODO: Replace with legit EAMCS API key when making the change
   const classes = useStyles();
   const { ...rest } = props;
   return (

@@ -28,7 +28,15 @@ Transition.displayName = "Transition";
 
 const useStyles = makeStyles(styles);
 
-export default function CourseRegisterModal({ modal, setModal, courseName, courseTuition, courseRegistration }) {
+export default function CourseRegisterModal({
+  modal,
+  setModal,
+  courseName,
+  courseTuition,
+  courseRegistration,
+  easLegacyPurchaseOverride,
+  eamcsLegacyPurchaseOverride
+}) {
   const classes = useStyles();
   const [checkedState, setCheckedState] = useState({
     Tuition: false,
@@ -165,7 +173,11 @@ export default function CourseRegisterModal({ modal, setModal, courseName, cours
           </a>
           .
         </p>
-        <CoursePurchaseButton amount={calculateTotalAmount()} />
+        <CoursePurchaseButton
+          amount={calculateTotalAmount()}
+          easLegacyPurchaseOverride={easLegacyPurchaseOverride}
+          eamcsLegacyPurchaseOverride={eamcsLegacyPurchaseOverride}
+        />
       </DialogContent>
       <DialogActions className={classes.modalFooter}>
         <Button

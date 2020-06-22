@@ -133,7 +133,7 @@ export default function KidCourses() {
         courseTuition={courseInfo.courseTuition}
         courseRegistration={courseInfo.courseRegistration}
         courseMaterial={courseInfo.courseMaterial}
-        easLegacyPurchaseOverride={true}
+        easLegacyPurchaseOverride={false}
       />
     </GridItem>
   );

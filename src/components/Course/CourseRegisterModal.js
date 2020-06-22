@@ -35,7 +35,8 @@ export default function CourseRegisterModal({
   courseTuition,
   courseRegistration,
   courseMaterial,
-  easLegacyPurchaseOverride
+  easLegacyPurchaseOverride,
+  eamcsLegacyPurchaseOverride
 }) {
   const classes = useStyles();
   const [checkedState, setCheckedState] = useState({
@@ -183,7 +184,11 @@ export default function CourseRegisterModal({
           </a>
           .
         </p>
-        <CoursePurchaseButton amount={calculateTotalAmount()} easLegacyPurchaseOverride={easLegacyPurchaseOverride} />
+        <CoursePurchaseButton
+          amount={calculateTotalAmount()}
+          easLegacyPurchaseOverride={easLegacyPurchaseOverride}
+          eamcsLegacyPurchaseOverride={eamcsLegacyPurchaseOverride}
+        />
       </DialogContent>
       <DialogActions className={classes.modalFooter}>
         <Button
