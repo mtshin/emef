@@ -88,7 +88,7 @@ export default function EASGallerySection() {
                 <h4 className={cardClasses.cardTitle}>Student Gallery</h4>
                 <p>Works done by our students in EAS classes.</p>
                 <Button component={Link} to="/eas/studentGallery" color="primary">
-                  View Studio Gallery
+                  View Student Gallery
                 </Button>
               </CardBody>
             </Card>
