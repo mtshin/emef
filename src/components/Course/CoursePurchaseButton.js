@@ -20,13 +20,21 @@ export default function CoursePurchaseButton({ amount, easLegacyPurchaseOverride
     }
   };
 
+  const legacyItemName = () => {
+    if (easLegacyPurchaseOverride) {
+      return "EAS Class Purchase";
+    } else if (eamcsLegacyPurchaseOverride) {
+      return "EAMCS Class Purchase";
+    }
+  };
+
   // Legacy Paypal button that allows for personal accounts to accept payments
   const legacyPayButton = (
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick" />
       <input type="hidden" name="business" value={legacyEmail()} />
       <input type="hidden" name="lc" value="US" />
-      <input type="hidden" name="item_name" value="EAS Class Purchase" />
+      <input type="hidden" name="item_name" value={legacyItemName()} />
       <input type="hidden" name="amount" value={amount} />
       <input type="hidden" name="currency_code" value="USD" />
       <input type="hidden" name="button_subtype" value="services" />

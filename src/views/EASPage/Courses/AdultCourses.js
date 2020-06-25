@@ -141,7 +141,7 @@ export default function AdultCourses() {
         courseTuition={courseInfo.courseTuition}
         courseRegistration={courseInfo.courseRegistration}
         courseMaterial={courseInfo.courseMaterial}
-        easLegacyPurchaseOverride={false}
+        easLegacyPurchaseOverride={true}
       />
     </GridItem>
   );

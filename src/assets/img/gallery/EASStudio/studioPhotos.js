@@ -1,8 +1,6 @@
-import ducksRiver from "assets/img/gallery/EASStudio/ducks_river_compressed_lossy.jpg";
-
 export const studioPhotos = [
   {
-    src: ducksRiver,
+    src: "https://lh3.google.com/u/0/d/1d4UX4Rr2sCAfvhnQ6dvAvuusE4ZQNOsv=w1920-h937-iv1",
     width: 6,
     height: 3,
     title: "6x3"
