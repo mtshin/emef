@@ -179,7 +179,11 @@ export default function CourseRegisterModal({
         <br />
         <p>
           To purchase with Venmo, please ensure the app is configured properly by allowing{" "}
-          <a href="https://help.venmo.com/hc/en-us/articles/115010455987-Getting-Started-Purchasing-with-Venmo">
+          <a
+            href="https://help.venmo.com/hc/en-us/articles/115010455987-Getting-Started-Purchasing-with-Venmo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Enable Mobile Web Purchase or Connect Browsers
           </a>
           .

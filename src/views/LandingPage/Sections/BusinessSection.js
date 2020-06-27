@@ -17,8 +17,8 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/abou
 import imagesStyles from "assets/jss/material-kit-react/imagesStyles.js";
 
 // business card photos
-import EASPhoto from "assets/img/bg.jpg";
-import EAMCSPhoto from "assets/img/bg2.jpg";
+import EASPhoto from "assets/img/eas_bg_med.jpg";
+import EAMCSPhoto from "assets/img/eamcs_bg_med.jpg";
 
 import { cardTitle } from "assets/jss/material-kit-react.js";
 

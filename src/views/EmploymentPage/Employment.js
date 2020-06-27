@@ -32,7 +32,7 @@ export default function Employment(props) {
         }}
         {...rest}
       />
-      <Parallax extraSmall filter image={require("assets/img/profile-bg.jpg")} />
+      <Parallax extraSmall filter image={require("assets/img/employment_bg_large.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <div className={classes.section}>
