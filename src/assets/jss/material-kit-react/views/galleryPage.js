@@ -43,6 +43,10 @@ const galleryPageStyle = {
     textDecoration: "none",
     justifyContent: "center"
   },
+  section: {
+    padding: "70px 0",
+    textAlign: "center"
+  },
   socials: {
     marginTop: "0",
     width: "100%",

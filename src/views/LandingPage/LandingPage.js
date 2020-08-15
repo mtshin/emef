@@ -22,7 +22,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import AboutSection from "./Sections/AboutSection.js";
 import BusinessSection from "./Sections/BusinessSection.js";
 import ContactSection from "./Sections/ContactSection.js";
-import TeamSection from "./Sections/TeamSection.js";
 
 const dashboardRoutes = [];
 
@@ -63,7 +62,6 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <AboutSection />
           <BusinessSection />
-          <TeamSection />
           <ContactSection />
         </div>
       </div>

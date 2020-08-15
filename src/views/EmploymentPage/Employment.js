@@ -12,6 +12,9 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Map from "components/Map/Map.js";
 import Parallax from "components/Parallax/Parallax.js";
 
+// Sections for this page
+import TeamSection from "./Sections/TeamSection.js"
+
 import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
 const useStyles = makeStyles(styles);
@@ -35,6 +38,7 @@ export default function Employment(props) {
       <Parallax extraSmall filter image={require("assets/img/employment_bg_large.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+        <TeamSection />
           <div className={classes.section}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
