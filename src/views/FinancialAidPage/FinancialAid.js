@@ -38,22 +38,24 @@ export default function FinancialAid(props) {
         }}
         {...rest}
       />
-      //TODO: Replace background pic
-      <Parallax extraSmall filter image={require("assets/img/employment_bg_large.jpg")} />
+      {
+        //TODO: Replace background pic
+      }{" "}
+      <Parallax extraSmall filter image={require("assets/img/finaid_bg_large.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <div className={classes.section}>
+          <div className={classNames(classes.section, classes.botMargin)}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Financial Aid</h2>
                 <h4 className={classes.description}>
-                  It is our mission to provide education to all without discrimination of
-                  any kind including but not limited to financial circumstances. Please
-                  fill out the relevant forms and send to <a href="mailto:emef@teachers.org">emef900@gmail.com</a>
-                  {" "}or{" "} <a href="mailto:emef@teachers.org">emef@teachers.org</a>.
+                  It is our mission to provide education to all without discrimination of any kind
+                  including but not limited to financial circumstances. Please fill out the relevant
+                  forms and send to <a href="mailto:emef@teachers.org">emef900@gmail.com</a> or{" "}
+                  <a href="mailto:emef@teachers.org">emef@teachers.org</a>.
                 </h4>
               </GridItem>
-              <GridItem cs={12} sm={12} md={8}>
+              <GridItem cs={12} sm={12} md={8} className={classes.topMargin}>
                 <a
                   href={ScholarshipApplicationForm}
                   download="ScholarshipApplicationForm.pdf"
@@ -81,25 +83,8 @@ export default function FinancialAid(props) {
               </GridItem>
             </GridContainer>
           </div>
-
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8}>
-                <h2 className={classes.title}>EAMCS</h2>
-                <h3 className={classes.title}>- Math/SAT/CS Teacher -</h3>
-                <h5 className={classes.description}>
-                  Part-time opportunity with the option to work remotely or onsite. BS in Math, Computer Science or related
-                  field required. MTEL preferred but not required.
-                </h5>
-                <h3 className={classes.title}>- Math/SAT/CS Intern/Volunteer -</h3>
-                <h5 className={classes.description}>
-                  Paid internship or volunteer opportunity with the option to work remotely or onsite. Preferrably for
-                  students pursuing a BS in Math, Computer Science, or Education in these fields.
-                </h5>
-              </GridItem>
-            </GridContainer>
-
-          </div>
         </div>
+      </div>
       <Footer />
     </div>
   );

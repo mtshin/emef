@@ -61,6 +61,15 @@ const galleryPageStyle = {
   navWrapper: {
     margin: "20px auto 50px auto",
     textAlign: "center"
+  },
+  botPadding: {
+    paddingBottom: "50px"
+  },
+  botMargin: {
+    marginBottom: "50px"
+  },
+  topMargin: {
+    marginTop: "20px"
   }
 };
 
