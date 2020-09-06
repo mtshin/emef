@@ -146,6 +146,11 @@ const headerStyle = {
     paddingRight: "0px",
     paddingLeft: "0",
     ...transition
+  },
+  socialIcons: {
+    position: "relative",
+    fontSize: "20px !important",
+    marginRight: "4px"
   }
 };
 

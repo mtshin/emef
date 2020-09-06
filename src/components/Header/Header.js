@@ -64,7 +64,8 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Button component={Link} to="/" className={classes.title}>
-      {brand}
+      <i className={classes.socialIcons + " fa fa-home"} />
+      &nbsp;{brand}
     </Button>
   );
   return (

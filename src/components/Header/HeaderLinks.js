@@ -154,7 +154,7 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button color="transparent" component={Link} to="/employment" className={classes.navLink} fullWidth>
+          <Button color="transparent" component={Link} to="/faculty" className={classes.navLink} fullWidth>
             <i className={classes.socialIcons + " fa fa-handshake"} />
             &nbsp;Faculty
           </Button>
@@ -163,13 +163,13 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Scholarships & More"
+          title="Forms"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button color="transparent" component={Link} to="/financialAid" className={classes.navLink} fullWidth>
+          <Button color="transparent" component={Link} to="/forms" className={classes.navLink} fullWidth>
             <i className={classes.socialIcons + " fa fa-graduation-cap"} />
-            &nbsp;Financial Aid
+            &nbsp;Forms
           </Button>
         </Tooltip>
       </ListItem>

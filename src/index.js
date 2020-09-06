@@ -26,8 +26,8 @@ ReactDOM.render(
   <SnackbarProvider maxSnack={3}>
     <Router history={hist}>
       <Switch>
-        <Route path="/employment" exact component={Employment} />
-        <Route path="/financialAid" exact component={FinancialAid} />
+        <Route path="/faculty" exact component={Employment} />
+        <Route path="/forms" exact component={FinancialAid} />
         <Route path="/landing-page" exact component={LandingPage} />
         <Route path="/profile-page" exact component={ProfilePage} />
         <Route path="/login-page" exact component={LoginPage} />

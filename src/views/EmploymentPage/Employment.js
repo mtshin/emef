@@ -26,7 +26,7 @@ export default function Employment(props) {
     <div>
       <Header
         color="transparent"
-        brand="EMEF"
+        brand="Faculty"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
