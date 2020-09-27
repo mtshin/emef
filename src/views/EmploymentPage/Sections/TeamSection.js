@@ -22,14 +22,10 @@ const useStyles = makeStyles(styles);
 
 export default function TeamSection() {
   const classes = useStyles();
-  const imageClasses = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+  const imageClasses = classNames(classes.imgRaised, classes.imgRoundedCircle, classes.imgFluid);
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Faculty</h2>
+      <h2 className={classes.title}>Staff</h2>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
@@ -44,10 +40,8 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  You can write here details about one of your team members. You can give more details about what they do.
+                  Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
               </CardBody>
             </Card>
@@ -55,25 +49,17 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img
-                  src={jungrimPhoto}
-                  alt="jungrimPhoto"
-                  className={imageClasses}
-                />
+                <img src={jungrimPhoto} alt="jungrimPhoto" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Jungrim &apos;Victoria&apos; Yea
                 <br />
-                <small className={classes.smallTitle}>
-                  Treasurer | Secretary
-                </small>
+                <small className={classes.smallTitle}>Treasurer | Secretary</small>
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  You can write here details about one of your team members. You can give more details about what they do.
+                  Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
               </CardBody>
             </Card>
@@ -81,11 +67,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img
-                  src={matthewPhoto}
-                  alt="matthewPhoto"
-                  className={imageClasses}
-                />
+                <img src={matthewPhoto} alt="matthewPhoto" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Matthew Shin
@@ -94,10 +76,8 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  You can write here details about one of your team members. You can give more details about what they do.
+                  Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
               </CardBody>
             </Card>

@@ -154,9 +154,9 @@ export default function HeaderLinks(props) {
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
-          <Button color="transparent" component={Link} to="/faculty" className={classes.navLink} fullWidth>
+          <Button color="transparent" component={Link} to="/staff" className={classes.navLink} fullWidth>
             <i className={classes.socialIcons + " fa fa-handshake"} />
-            &nbsp;Faculty
+            &nbsp;Staff
           </Button>
         </Tooltip>
       </ListItem>
