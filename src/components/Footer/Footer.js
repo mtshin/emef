@@ -26,19 +26,16 @@ export default function Footer(props) {
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <b>
-          &copy; {1900 + new Date().getYear()} Evergreen Mission and Education
-          Foundation 2016 INC.
-        </b>
+        <b>&copy; {1900 + new Date().getYear()} Evergreen Mission and Education Foundation 2016 INC.</b>
         <br />
         379 Liberty St. STE 201A & 201C <br />
         Rockland, MA 02370
         <br />
         <a href="tel:617-454-4347">(617) 454-4347</a>
         <br />
-        <a href="mailto:emef@teachers.org">emef900@gmail.com</a>
+        <a href="mailto:emef900@gmail.com">emef900@gmail.com</a>
         <b> | </b>
-        <a href="mailto:emef@teachers.org">emef@teachers.org</a>
+        <a href="mailto:emef900@teachers.org">emef900@teachers.org</a>
       </div>
     </footer>
   );

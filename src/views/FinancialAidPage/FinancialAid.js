@@ -48,15 +48,15 @@ export default function FinancialAid(props) {
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Forms</h2>
                 <h4 className={classes.description}>
-                  Please submit forms to <a href="mailto:emef@teachers.org">emef900@gmail.com</a> or{" "}
-                  <a href="mailto:emef@teachers.org">emef@teachers.org</a>.
+                  Please submit forms to <a href="mailto:emef900@gmail.com">emef900@gmail.com</a> or{" "}
+                  <a href="mailto:emef900@teachers.org">emef900@teachers.org</a>.
                 </h4>
               </GridItem>
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Financial Aid</h2>
                 <h4 className={classes.description}>
-                  It is our mission to provide education to all without discrimination of any kind
-                  including but not limited to financial circumstances.
+                  It is our mission to provide education to all without discrimination of any kind including but not limited
+                  to financial circumstances.
                 </h4>
               </GridItem>
               <GridItem cs={12} sm={12} md={8} className={classes.topMargin}>
@@ -87,9 +87,7 @@ export default function FinancialAid(props) {
               </GridItem>
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>EAS</h2>
-                <h4 className={classes.description}>
-                  Forms for Evergreen Art Studio.
-                </h4>
+                <h4 className={classes.description}>Forms for Evergreen Art Studio.</h4>
               </GridItem>
               <GridItem cs={12} sm={12} md={8} className={classes.topMargin}>
                 <a
@@ -106,9 +104,7 @@ export default function FinancialAid(props) {
               </GridItem>
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>EAMCS</h2>
-                <h4 className={classes.description}>
-                  Forms for Evergreen Academy of Math & Computer Science.
-                </h4>
+                <h4 className={classes.description}>Forms for Evergreen Academy of Math & Computer Science.</h4>
               </GridItem>
               <GridItem cs={12} sm={12} md={8} className={classes.topMargin}>
                 <a
