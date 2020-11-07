@@ -10,13 +10,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
+// import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
 
-import jehoPhoto from "assets/img/faces/card-profile1-square.jpg";
-import jungrimPhoto from "assets/img/faces/avatar.jpg";
-import matthewPhoto from "assets/img/faces/christian.jpg";
+import jehoPhoto from "assets/img/faces/Daniel.png";
+import jungrimPhoto from "assets/img/faces/Victoria.jpg";
+import matthewPhoto from "assets/img/faces/Matthew.png";
 
 const useStyles = makeStyles(styles);
 
@@ -38,12 +38,12 @@ export default function TeamSection() {
                 <br />
                 <small className={classes.smallTitle}>CEO | President</small>
               </h4>
-              <CardBody>
+              {/* <CardBody>
                 <p className={classes.description}>
                   You can write here details about one of your team members. You can give more details about what they do.
                   Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
-              </CardBody>
+              </CardBody> */}
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
@@ -56,12 +56,12 @@ export default function TeamSection() {
                 <br />
                 <small className={classes.smallTitle}>Treasurer | Secretary</small>
               </h4>
-              <CardBody>
+              {/* <CardBody>
                 <p className={classes.description}>
                   You can write here details about one of your team members. You can give more details about what they do.
                   Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
-              </CardBody>
+              </CardBody> */}
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
@@ -74,12 +74,12 @@ export default function TeamSection() {
                 <br />
                 <small className={classes.smallTitle}>Director</small>
               </h4>
-              <CardBody>
+              {/* <CardBody>
                 <p className={classes.description}>
                   You can write here details about one of your team members. You can give more details about what they do.
                   Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
-              </CardBody>
+              </CardBody> */}
             </Card>
           </GridItem>
         </GridContainer>
