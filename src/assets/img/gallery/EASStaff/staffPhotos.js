@@ -1,4 +1,4 @@
-export const studioPhotos = [
+export const staffPhotos = [
   {
     src: "https://lh3.google.com/u/0/d/1d4UX4Rr2sCAfvhnQ6dvAvuusE4ZQNOsv=w1920-h937-iv1",
     width: 6,

@@ -66,10 +66,10 @@ export default function EASGallerySection() {
                   flexDirection: "column"
                 }}
               >
-                <h4 className={cardClasses.cardTitle}>Studio Gallery</h4>
+                <h4 className={cardClasses.cardTitle}>Staff Gallery</h4>
                 <p>Works done by our EAS instructors. Please inquire for commissions or purchase!</p>
-                <Button component={Link} to="/eas/studioGallery" color="primary">
-                  View Studio Gallery
+                <Button component={Link} to="/eas/staffGallery" color="primary">
+                  View Staff Gallery
                 </Button>
               </CardBody>
             </Card>

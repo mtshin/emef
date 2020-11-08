@@ -34,9 +34,9 @@ export default function TeamSection() {
                 <img src={jehoPhoto} alt="jehoPhoto" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Jeho &apos;Daniel&apos; Shin
+                CEO | President
                 <br />
-                <small className={classes.smallTitle}>CEO | President</small>
+                <small className={classes.smallTitle}>Jeho &apos;Daniel&apos; Shin</small>
               </h4>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -52,9 +52,9 @@ export default function TeamSection() {
                 <img src={jungrimPhoto} alt="jungrimPhoto" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Jungrim &apos;Victoria&apos; Yea
+                Treasurer | Secretary
                 <br />
-                <small className={classes.smallTitle}>Treasurer | Secretary</small>
+                <small className={classes.smallTitle}>Jungrim &apos;Victoria&apos; Yea</small>
               </h4>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -70,9 +70,9 @@ export default function TeamSection() {
                 <img src={matthewPhoto} alt="matthewPhoto" className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Matthew Shin
+                Director
                 <br />
-                <small className={classes.smallTitle}>Director</small>
+                <small className={classes.smallTitle}>Matthew Shin</small>
               </h4>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -80,6 +80,51 @@ export default function TeamSection() {
                   Feel free to add some <a href="#pablo">links</a> for people to be able to follow them outside the site.
                 </p>
               </CardBody> */}
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Staff Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Paula Lynch</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Staff Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Eduation Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Eduation Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Peyton Liu</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Eduation Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Nandni Patel</small>
+              </h4>
             </Card>
           </GridItem>
         </GridContainer>

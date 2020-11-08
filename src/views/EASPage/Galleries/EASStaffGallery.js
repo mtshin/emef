@@ -11,13 +11,13 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import ResponsiveGallery from "components/Gallery/ResponsiveGallery";
-import { studioPhotos } from "assets/img/gallery/EASStudio/studioPhotos";
+import { staffPhotos } from "assets/img/gallery/EASStaff/staffPhotos";
 
 import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
 const useStyles = makeStyles(styles);
 
-export default function EASStudioGallery(props) {
+export default function EASStaffGallery(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -39,7 +39,7 @@ export default function EASStudioGallery(props) {
           <div className={classes.section}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
-                <h2 className={classes.title}>Studio Gallery</h2>
+                <h2 className={classes.title}>Staff Gallery</h2>
                 <h4 className={classes.description}>
                   All images shown are works done by our instructors at the EAS studio. Feel free to contact us if you are
                   interested in a commision or purchase!
@@ -50,7 +50,7 @@ export default function EASStudioGallery(props) {
           <div className={classes.section}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
-                <ResponsiveGallery photos={studioPhotos} />
+                <ResponsiveGallery photos={staffPhotos} />
               </GridItem>
             </GridContainer>
           </div>
