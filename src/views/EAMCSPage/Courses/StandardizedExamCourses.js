@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-import TrendingUp from "@material-ui/icons/TrendingUp";
-
-// core components
 import Button from "components/CustomButtons/Button.js";
 import CourseRegisterModalNoMaterials from "components/Course/CourseRegisterModalNoMaterials.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
-
+import TrendingUp from "@material-ui/icons/TrendingUp";
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+
+// @material-ui/core components
+
+
+// @material-ui/icons
+
+
+// core components
+
+
+
+
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -54,7 +63,7 @@ export default function StandardizedExamCourses() {
                   <b>Age:</b>&nbsp;High School
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$25/hr
+                  <b>Tuition:</b>&nbsp;$30/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -69,7 +78,7 @@ export default function StandardizedExamCourses() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Standardized Exam Prep (SAT, PSAT, SSAT)",
-                      courseTuition: 25,
+                      courseTuition: 30,
                       courseRegistration: 20
                     });
                     setModal(true);

@@ -1,17 +1,26 @@
 import React, { useState } from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-import Class from "@material-ui/icons/Class";
-
-// core components
 import Button from "components/CustomButtons/Button.js";
+import Class from "@material-ui/icons/Class";
 import CourseRegisterModalNoMaterials from "components/Course/CourseRegisterModalNoMaterials.js";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
-
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+
+// @material-ui/core components
+
+
+// @material-ui/icons
+
+
+// core components
+
+
+
+
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -54,7 +63,7 @@ export default function MathCoursesBasic() {
                   <b>Age:</b>&nbsp;1st Grade - 8th Grade
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$15/hr
+                  <b>Tuition:</b>&nbsp;$20/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -69,7 +78,7 @@ export default function MathCoursesBasic() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Basic Math",
-                      courseTuition: 15,
+                      courseTuition: 20,
                       courseRegistration: 20
                     });
                     setModal(true);

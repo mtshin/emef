@@ -1,18 +1,28 @@
 import React, { useState } from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-import Code from "@material-ui/icons/Code";
-import DeveloperBoard from "@material-ui/icons/DeveloperBoard";
-
-// core components
 import Button from "components/CustomButtons/Button.js";
+import Code from "@material-ui/icons/Code";
 import CourseRegisterModalNoMaterials from "components/Course/CourseRegisterModalNoMaterials.js";
+import DeveloperBoard from "@material-ui/icons/DeveloperBoard";
 import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
-
+import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+
+// @material-ui/core components
+
+
+// @material-ui/icons
+
+
+
+// core components
+
+
+
+
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -56,7 +66,7 @@ export default function CSCoursesAdvanced() {
                   <b>Age:</b>&nbsp;Any
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$25/hr
+                  <b>Tuition:</b>&nbsp;$30/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -71,7 +81,7 @@ export default function CSCoursesAdvanced() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms III (Website construction I)",
-                      courseTuition: 25,
+                      courseTuition: 30,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -104,7 +114,7 @@ export default function CSCoursesAdvanced() {
                   <b>Age:</b>&nbsp;Any
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$25/hr
+                  <b>Tuition:</b>&nbsp;$30/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -119,7 +129,7 @@ export default function CSCoursesAdvanced() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms IV (Website construction II)",
-                      courseTuition: 25,
+                      courseTuition: 30,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -155,7 +165,7 @@ export default function CSCoursesAdvanced() {
                   <b>Age:</b>&nbsp;Any
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$25/hr
+                  <b>Tuition:</b>&nbsp;$30/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -170,7 +180,7 @@ export default function CSCoursesAdvanced() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms V (Basic Programming)",
-                      courseTuition: 25,
+                      courseTuition: 30,
                       courseRegistration: 20
                     });
                     setModal(true);
