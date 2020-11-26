@@ -47,7 +47,7 @@ export default function EASStaffGallery(props) {
               </GridItem>
             </GridContainer>
           </div>
-          <div className={classes.section}>
+          <div className={classes.sectionGallery}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
                 <ResponsiveGallery photos={staffPhotos} />

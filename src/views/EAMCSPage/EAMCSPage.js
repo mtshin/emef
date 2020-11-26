@@ -14,7 +14,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
-import EAMCSLandingPageCarousel from "components/Carousel/EAMCSLandingPageCarousel.js";
+// import EAMCSLandingPageCarousel from "components/Carousel/EAMCSLandingPageCarousel.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -57,7 +57,8 @@ export default function LandingPage(props) {
               <h4>{/* EAMCS landing page desc filler */}</h4>
             </GridItem>
           </GridContainer>
-          <EAMCSLandingPageCarousel />
+          {/* Temporarily removed until pictures are available */}
+          {/* <EAMCSLandingPageCarousel /> */}
         </div>
       </Parallax>
 

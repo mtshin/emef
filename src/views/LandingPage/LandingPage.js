@@ -12,7 +12,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
-import LandingPageCarousel from "components/Carousel/LandingPageCarousel.js";
+// import LandingPageCarousel from "components/Carousel/LandingPageCarousel.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -54,7 +54,8 @@ export default function LandingPage(props) {
               </h4> */}
             </GridItem>
           </GridContainer>
-          <LandingPageCarousel />
+          {/* Temporarily removed until pictures are available */}
+          {/* <LandingPageCarousel /> */}
         </div>
       </Parallax>
 

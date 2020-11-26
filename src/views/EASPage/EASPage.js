@@ -14,7 +14,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
-import EASLandingPageCarousel from "components/Carousel/EASLandingPageCarousel.js";
+// import EASLandingPageCarousel from "components/Carousel/EASLandingPageCarousel.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -56,7 +56,8 @@ export default function LandingPage(props) {
               <h4>{/* EAS Landing page desc filler */}</h4>
             </GridItem>
           </GridContainer>
-          <EASLandingPageCarousel />
+          {/* Temporarily removed until pictures are available */}
+          {/* <EASLandingPageCarousel /> */}
         </div>
       </Parallax>
 
