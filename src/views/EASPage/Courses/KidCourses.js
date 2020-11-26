@@ -57,9 +57,6 @@ export default function KidCourses() {
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
                 </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jungrim &quot;Victoria&quot; Yea
-                </p>
                 <Button
                   style={{ boxShadow: "none" }}
                   color="info"
@@ -101,9 +98,6 @@ export default function KidCourses() {
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jungrim &quot;Victoria&quot; Yea
                 </p>
                 <Button
                   style={{ boxShadow: "none" }}

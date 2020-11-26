@@ -11,18 +11,9 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/pills
 
 // @material-ui/core components
 
-
 // @material-ui/icons
 
-
-
 // core components
-
-
-
-
-
-
 
 const useStyles = makeStyles(styles);
 
@@ -71,9 +62,6 @@ export default function CSCoursesAdvanced() {
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
                 </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jeho &quot;Daniel&quot; Shin
-                </p>
                 <Button
                   style={{ boxShadow: "none" }}
                   color="info"
@@ -118,9 +106,6 @@ export default function CSCoursesAdvanced() {
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jeho &quot;Daniel&quot; Shin
                 </p>
                 <Button
                   style={{ boxShadow: "none" }}
@@ -169,9 +154,6 @@ export default function CSCoursesAdvanced() {
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
-                </p>
-                <p className={(classes.description, classes.courseDetails)}>
-                  <b>Instructor:</b>&nbsp;Jeho &quot;Daniel&quot; Shin
                 </p>
                 <Button
                   style={{ boxShadow: "none" }}
