@@ -103,7 +103,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Eduation Assistant (Volunteer)
+                Education Assistant (Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
               </h4>
@@ -112,7 +112,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Eduation Assistant (Volunteer)
+                Education Assistant (Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Peyton Liu</small>
               </h4>
@@ -121,9 +121,18 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Eduation Assistant (Volunteer)
+                Education Assistant (Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Nandni Patel</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Education Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Julia Dorris</small>
               </h4>
             </Card>
           </GridItem>
