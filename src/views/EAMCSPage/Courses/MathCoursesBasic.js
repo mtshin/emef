@@ -55,7 +55,7 @@ export default function MathCoursesBasic() {
                   <b>Age:</b>&nbsp;1st Grade - 8th Grade
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -67,7 +67,7 @@ export default function MathCoursesBasic() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Basic Math",
-                      courseTuition: 20,
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);

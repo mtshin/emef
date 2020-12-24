@@ -56,7 +56,7 @@ export default function CSCoursesBasic() {
                   <b>Age:</b>&nbsp;Seniors
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -68,7 +68,7 @@ export default function CSCoursesBasic() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms 0 (Beginner)",
-                      courseTuition: 20,
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -101,7 +101,7 @@ export default function CSCoursesBasic() {
                   <b>Age:</b>&nbsp;Any
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -113,7 +113,7 @@ export default function CSCoursesBasic() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms I (Microsoft Office I)",
-                      courseTuition: 20,
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);
@@ -146,7 +146,7 @@ export default function CSCoursesBasic() {
                   <b>Age:</b>&nbsp;Any
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
-                  <b>Tuition:</b>&nbsp;$20/hr
+                  <b>Tuition:</b>&nbsp;$25/hr
                 </p>
                 <p className={(classes.description, classes.courseDetails)}>
                   <b>Registration:</b>&nbsp;$20 (first time only)
@@ -158,7 +158,7 @@ export default function CSCoursesBasic() {
                   onClick={() => {
                     setCourseInfo({
                       courseName: "Coms II (Microsoft Office II)",
-                      courseTuition: 20,
+                      courseTuition: 25,
                       courseRegistration: 20
                     });
                     setModal(true);
