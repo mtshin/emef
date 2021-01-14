@@ -85,18 +85,9 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Staff Assistant (Volunteer)
+                Administrative Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Paula Lynch</small>
-              </h4>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card plain>
-              <h4 className={classes.cardTitle}>
-                Staff Assistant (Volunteer)
-                <br />
-                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
+                <small className={classes.smallTitle}>Beverly Wu</small>
               </h4>
             </Card>
           </GridItem>
@@ -105,7 +96,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
+                <small className={classes.smallTitle}>Julia Dorris</small>
               </h4>
             </Card>
           </GridItem>
@@ -132,7 +123,25 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Julia Dorris</small>
+                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Staff Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Staff Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Paula Lynch</small>
               </h4>
             </Card>
           </GridItem>
