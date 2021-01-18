@@ -19,6 +19,7 @@ import EASStaffGallery from "views/EASPage/Galleries/EASStaffGallery.js";
 import EASStudentGallery from "views/EASPage/Galleries/EASStudentGallery.js";
 import Employment from "views/EmploymentPage/Employment.js";
 import FinancialAid from "views/FinancialAidPage/FinancialAid.js";
+import News from "views/NewsPage/News.js";
 
 var hist = createBrowserHistory();
 
@@ -28,6 +29,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/staff" exact component={Employment} />
         <Route path="/forms" exact component={FinancialAid} />
+        <Route path="/news" exact component={News} />
         <Route path="/landing-page" exact component={LandingPage} />
         <Route path="/profile-page" exact component={ProfilePage} />
         <Route path="/login-page" exact component={LoginPage} />

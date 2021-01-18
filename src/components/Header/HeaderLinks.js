@@ -42,7 +42,7 @@ export default function HeaderLinks(props) {
             >
               <Button color="transparent" component={Link} to="/" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-tree"} />
-                &nbsp;EMEF Home
+                &nbsp;EMEF
               </Button>
             </Tooltip>,
             <Tooltip
@@ -83,7 +83,7 @@ export default function HeaderLinks(props) {
             >
               <Button color="transparent" component={Link} to="/eas" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-paint-brush"} />
-                &nbsp;EAS Home
+                &nbsp;EAS
               </Button>
             </Tooltip>,
             <Tooltip
@@ -124,7 +124,7 @@ export default function HeaderLinks(props) {
             >
               <Button color="transparent" component={Link} to="/eamcs" className={classes.navLink} fullWidth>
                 <i className={classes.socialIcons + " fa fa-calculator"} />
-                &nbsp;EAMCS Home
+                &nbsp;EAMCS
               </Button>
             </Tooltip>,
             <Tooltip
@@ -163,13 +163,26 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Forms"
+          title="Docs & More"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button color="transparent" component={Link} to="/forms" className={classes.navLink} fullWidth>
             <i className={classes.socialIcons + " fa fa-graduation-cap"} />
             &nbsp;Forms
+          </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="instagram-tooltip"
+          title="News"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button color="transparent" component={Link} to="/news" className={classes.navLink} fullWidth>
+            <i className={classes.socialIcons + " fa fa-newspaper"} />
+            &nbsp;What's New
           </Button>
         </Tooltip>
       </ListItem>
