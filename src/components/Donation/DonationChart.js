@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { Cell, Legend, PieChart, Pie, ResponsiveContainer, Tooltip } from "recharts";
+import { PieChart, Pie, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
   {
@@ -12,11 +12,18 @@ const data = [
   { name: "Local Food Pantry", value: 5 }
 ];
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
 export default function DonationChart() {
+  const [windowWidth, setWindowWIdth] = useState(window.innerWidth);
 
-  return (
+  useEffect(() => {
+    const handleResize = () => setWindowWIdth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return windowWidth >= 768 ? (
     <ResponsiveContainer height={250} width="100%">
       <PieChart>
         <Pie
@@ -37,19 +44,21 @@ export default function DonationChart() {
             const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
             return (
-              <text x={x} y={y} fill="white" textAnchor={x > cx ? "start" : "end"} dominantBaseline="central">
-                ({value}%)
+              <text x={x} y={y} fill="#a132ac" textAnchor={x > cx ? "start" : "end"} dominantBaseline="central">
+                {data[index].name} ({value}%)
               </text>
             );
           }}
-        >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
+        />
         <Tooltip formatter={(value) => value + "%"} />
-        <Legend />
       </PieChart>
     </ResponsiveContainer>
-  )
+  ) : (
+      <ResponsiveContainer height={250} width="100%">
+        <PieChart>
+          <Pie data={data} cx="50%" cy="50%" outerRadius={100} fill="#a132ac" dataKey="value" labelLine={false} />
+          <Tooltip formatter={(value) => value + "%"} />
+        </PieChart>
+      </ResponsiveContainer>
+    );
 }
