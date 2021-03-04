@@ -1,21 +1,33 @@
-import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// core components
-import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Map from "components/Map/Map.js";
 import Parallax from "components/Parallax/Parallax.js";
+import React from "react";
+import TeamSection from "./Sections/TeamSection.js";
+import classNames from "classnames";
+import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-kit-react/views/galleryPage.js";
+
+// nodejs library that concatenates classes
+
+// @material-ui/core components
+
+// core components
+
+
+
+
+
+
+
 
 // Sections for this page
-import TeamSection from "./Sections/TeamSection.js";
 
-import styles from "assets/jss/material-kit-react/views/galleryPage.js";
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -39,6 +51,25 @@ export default function Employment(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classNames(classes.container, classes.botPadding)}>
           <TeamSection />
+          <div className={classes.section}>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={8}>
+                <h2 className={classes.title}>Liaison Offices</h2>
+                <h3 className={classes.description}>
+                  Asia
+                </h3>
+                <h4 className={classes.description}>
+                  301-1009, Hyundai 3rd Apartment
+                  <br />
+                  Jayang Dong, Gwangjin-gu, Seoul, South Korea
+                  <br />
+                  <a href="mailto:emef@teachers.org">emef@teachers.org</a>
+                  <br />
+                  <a href="tel:013-0534-2477">Tel: 013-0534-2477</a>
+                </h4>
+              </GridItem>
+            </GridContainer>
+          </div>
           <div className={classes.section}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
