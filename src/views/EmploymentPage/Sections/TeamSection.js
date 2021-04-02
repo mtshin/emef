@@ -1,22 +1,22 @@
-import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
-
+import Card from "components/Card/Card.js";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-// import CardBody from "components/Card/CardBody.js";
-
-import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
-
+import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 import jehoPhoto from "assets/img/faces/Daniel.png";
 import jungrimPhoto from "assets/img/faces/Victoria.jpg";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
 import matthewPhoto from "assets/img/faces/Matthew.png";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.js";
+
+// @material-ui/icons
+
+// import CardBody from "components/Card/CardBody.js";
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -96,7 +96,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Julia Dorris</small>
+                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
               </h4>
             </Card>
           </GridItem>
@@ -105,7 +105,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Peyton Liu</small>
+                <small className={classes.smallTitle}>Julia Dorris</small>
               </h4>
             </Card>
           </GridItem>
@@ -123,16 +123,16 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
+                <small className={classes.smallTitle}>Peter James</small>
               </h4>
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Staff Assistant (Volunteer)
+                Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
+                <small className={classes.smallTitle}>Peyton Liu</small>
               </h4>
             </Card>
           </GridItem>
@@ -142,6 +142,15 @@ export default function TeamSection() {
                 Staff Assistant (Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Paula Lynch</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
+                Staff Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
               </h4>
             </Card>
           </GridItem>
