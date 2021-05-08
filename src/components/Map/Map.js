@@ -1,9 +1,15 @@
+import { GoogleMapProvider, InfoWindow, MapBox, Marker } from "@googlemap-react/core";
 import React, { useState } from "react";
-// core components
+
+import Card from "components/Card/Card.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import { GoogleMapProvider, InfoWindow, MapBox, Marker } from "@googlemap-react/core";
+
+// core components
+
+
+
+
 
 export default function SectionMap() {
   const [infoDisplay, setInfoDisplay] = useState(true);

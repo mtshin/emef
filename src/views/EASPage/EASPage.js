@@ -1,29 +1,44 @@
+import EASAboutSection from "./Sections/EASAboutSection.js";
+import EASCoursesSection from "./Sections/EASCoursesSection.js";
+import EASGallerySection from "./Sections/EASGallerySection.js";
+import EAS_BG_LARGE from "assets/img/eas_bg_large.jpg";
+import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Parallax from "components/Parallax/Parallax.js";
 import React from "react";
-// Load EAS Paypal script
-import usePaypalScript from "hooks/usePaypalScript.js";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-kit-react/views/landingPage.js";
+import usePaypalScript from "hooks/usePaypalScript.js";
+
+// Load EAS Paypal script
+
+// nodejs library that concatenates classes
+
+// @material-ui/core components
+
 
 // @material-ui/icons
 
 // core components
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+
+
+
+
 // import Button from "components/CustomButtons/Button.js";
 // import EASLandingPageCarousel from "components/Carousel/EASLandingPageCarousel.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
 
-import styles from "assets/jss/material-kit-react/views/landingPage.js";
+
+
+
 
 // Sections for this page
-import EASAboutSection from "./Sections/EASAboutSection.js";
-import EASCoursesSection from "./Sections/EASCoursesSection.js";
-import EASGallerySection from "./Sections/EASGallerySection.js";
+
+
+
 // import EASRegisterSection from "./Sections/EASRegisterSection.js";
 
 const dashboardRoutes = [];
@@ -48,7 +63,7 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/eas_bg_large.jpg")}>
+      <Parallax filter image={EAS_BG_LARGE}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>

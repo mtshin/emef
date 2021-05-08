@@ -1,25 +1,24 @@
+// core components
+import Button from "components/CustomButtons/Button.js";
+import EAMCSClassRegistrationForm from "assets/docs/EAMCS/EAMCSClassRegistrationForm.pdf";
+import EASClassRegistrationForm from "assets/docs/EAS/EASClassRegistrationForm.pdf";
+import FINAID_BG_LARGE from "assets/img/finaid_bg_large.jpg";
+import FinancialAidApplicationForm from "assets/docs/FinancialAidApplicationForm.pdf";
+import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Parallax from "components/Parallax/Parallax.js";
 import React from "react";
+// @material-ui/icons
+import SaveAlt from "@material-ui/icons/SaveAlt";
+// docs
+import ScholarshipApplicationForm from "assets/docs/ScholarshipApplicationForm.pdf";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import SaveAlt from "@material-ui/icons/SaveAlt";
-// core components
-import Button from "components/CustomButtons/Button.js";
-import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
-
-// docs
-import ScholarshipApplicationForm from "assets/docs/ScholarshipApplicationForm.pdf";
-import FinancialAidApplicationForm from "assets/docs/FinancialAidApplicationForm.pdf";
-import EASClassRegistrationForm from "assets/docs/EAS/EASClassRegistrationForm.pdf";
-import EAMCSClassRegistrationForm from "assets/docs/EAMCS/EAMCSClassRegistrationForm.pdf";
-
 import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
 const useStyles = makeStyles(styles);
@@ -40,7 +39,7 @@ export default function FinancialAid(props) {
         }}
         {...rest}
       />
-      <Parallax extraSmall filter image={require("assets/img/finaid_bg_large.jpg")} />
+      <Parallax extraSmall filter image={FINAID_BG_LARGE} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <div className={classNames(classes.section, classes.botMargin)}>

@@ -1,18 +1,31 @@
-import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// core components
-import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
-
-import styles from "assets/jss/material-kit-react/views/galleryPage.js";
+import NEWS_BG_LARGE from "assets/img/news_bg_large.jpg";
 import NewsPost from "./Sections/NewsPost";
+import Parallax from "components/Parallax/Parallax.js";
+import React from "react";
+import classNames from "classnames";
+import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-kit-react/views/galleryPage.js";
+
+// nodejs library that concatenates classes
+
+// @material-ui/core components
+
+// core components
+
+
+
+
+
+
+
+
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -32,7 +45,7 @@ export default function News(props) {
         }}
         {...rest}
       />
-      <Parallax extraSmall filter image={require("assets/img/news_bg_large.jpg")} />
+      <Parallax extraSmall filter image={NEWS_BG_LARGE} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <div className={classNames(classes.section, classes.botMargin)}>

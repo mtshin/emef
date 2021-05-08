@@ -1,3 +1,4 @@
+import EMPLOYMENT_BG_LARGE from "assets/img/employment_bg_large.jpg";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -47,7 +48,7 @@ export default function Employment(props) {
         }}
         {...rest}
       />
-      <Parallax extraSmall filter image={require("assets/img/employment_bg_large.jpg")} />
+      <Parallax extraSmall filter image={EMPLOYMENT_BG_LARGE} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classNames(classes.container, classes.botPadding)}>
           <TeamSection />
