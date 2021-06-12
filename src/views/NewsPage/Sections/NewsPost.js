@@ -14,16 +14,29 @@ const useStyles = makeStyles(styles);
 
 export default function NewsPost(props) {
   const classes = useStyles();
-  const imageClasses = classNames(classes.imgRaised, classes.imgRounded, classes.imgFluid, classes.newsPostImage);
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRounded,
+    classes.imgFluid,
+    classes.newsPostImage
+  );
   const { ...rest } = props;
   return (
-    <GridContainer justify="center" className={rest.noSpacing ? "" : classes.newsPostBottomSpacing}>
+    <GridContainer
+      justify="center"
+      className={rest.noSpacing ? "" : classes.newsPostBottomSpacing}
+    >
       <GridItem xs={12} sm={12} md={6}>
-        <img src={rest.imageSrc} alt={`${rest.title}Photo`} className={imageClasses} />
+        <img
+          src={rest.imageSrc}
+          alt={`${rest.title}Photo`}
+          className={imageClasses}
+        />
       </GridItem>
-      <GridItem xs={12} sm={12} md={6}>
+      <GridItem xs={12} sm={12} md={6} justify="left">
         <h2 className={classes.title}>{rest.title}</h2>
-        <h4 className={classes.description}>{rest.description}</h4>
+        {/* <h4 className={classes.description}>{rest.description}</h4> */}
+        {rest.description}
         <p className={classes.newsPostDate}>{rest.date}</p>
       </GridItem>
     </GridContainer>

@@ -17,16 +17,6 @@ import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
 // core components
 
-
-
-
-
-
-
-
-
-
-
 const useStyles = makeStyles(styles);
 
 export default function News(props) {
@@ -41,7 +31,7 @@ export default function News(props) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -50,18 +40,53 @@ export default function News(props) {
         <div className={classes.container}>
           <div className={classNames(classes.section, classes.botMargin)}>
             <>
-              <GridContainer justify="center" className={classNames(classes.botPadding, classes.botMargin)}>
+              <GridContainer
+                justify="center"
+                className={classNames(classes.botPadding, classes.botMargin)}
+              >
                 <GridItem xs={12} sm={12} md={8}>
                   <h2 className={classes.title}>News</h2>
-                  <h4 className={classes.description}>The latest news and happenings in the EMEF organization.</h4>
+                  <h4 className={classes.description}>
+                    The latest news and happenings in the EMEF organization.
+                  </h4>
                 </GridItem>
               </GridContainer>
               <NewsPost
+                title={"Community Champions"}
+                description={
+                  <h4 className={classes.description}>
+                    Special thanks to{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.constellation.com/community/community-champions.html"
+                    >
+                      Constellation&apos;s Community Champions program
+                    </a>{" "}
+                    recognizing EMEF&apos;s impact to our local communities. We
+                    strive to provide education for all and instill a mindset to
+                    pass the genorisity along to reach as many in need as
+                    possible.
+                  </h4>
+                }
+                imageSrc={
+                  "https://lh3.google.com/u/0/d/1WlQv8jEb3Kby2cpMnvrRPqFn_IXXPTL-=w1408-h3516-iv1"
+                }
+                date={"6/11/2021"}
+              />
+              <NewsPost
                 title={"Ten Years!"}
                 description={
-                  "We celebrate EMEF CEO & President, Jeho 'Daniel' Shin, completing ten years of his tenure at Harvard Medical School, especially as of late due to the COVID-19 pandemic. Congratulations and kudos for this amazing accomplishment!"
+                  <h4 className={classes.description}>
+                    We celebrate EMEF CEO & President, Jeho &apos;Daniel&apos;
+                    Shin, completing ten years of his tenure at Harvard Medical
+                    School, especially as of late due to the COVID-19 pandemic.
+                    Congratulations and kudos for this amazing accomplishment!
+                  </h4>
                 }
-                imageSrc={"https://lh3.google.com/u/0/d/1ibp5KOk462QHTbVdsm4U33UBdztlCmNk=w1920-h937-iv1"}
+                imageSrc={
+                  "https://lh3.google.com/u/0/d/1ibp5KOk462QHTbVdsm4U33UBdztlCmNk=w1920-h937-iv1"
+                }
                 date={"1/18/2021"}
                 noSpacing
               />

@@ -14,6 +14,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import News from "views/NewsPage/News.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
+import ScrollToTop from "components/Navigation/ScrollToTop.js";
 import React from "react";
 import ReactDOM from "react-dom";
 // For notifications
@@ -22,6 +23,7 @@ import { SnackbarProvider } from "notistack";
 ReactDOM.render(
   <SnackbarProvider maxSnack={3}>
     <BrowserRouter>
+      <ScrollToTop />
       <Switch>
         <Route path="/staff" exact component={Employment} />
         <Route path="/forms" exact component={FinancialAid} />
@@ -36,7 +38,7 @@ ReactDOM.render(
         <Route path="/eamcs" exact component={EAMCSPage} />
         <Route path="/" exact component={LandingPage} />
       </Switch>
-      </BrowserRouter>
+    </BrowserRouter>
   </SnackbarProvider>,
   document.getElementById("root")
 );
