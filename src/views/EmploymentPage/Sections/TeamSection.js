@@ -16,13 +16,15 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/team
 
 // import CardBody from "components/Card/CardBody.js";
 
-
-
 const useStyles = makeStyles(styles);
 
 export default function TeamSection() {
   const classes = useStyles();
-  const imageClasses = classNames(classes.imgRaised, classes.imgRoundedCircle, classes.imgFluid);
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>Staff</h2>
@@ -36,7 +38,9 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 CEO | President
                 <br />
-                <small className={classes.smallTitle}>Jeho &apos;Daniel&apos; Shin</small>
+                <small className={classes.smallTitle}>
+                  Jeho &apos;Daniel&apos; Shin
+                </small>
               </h4>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -49,12 +53,18 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={jungrimPhoto} alt="jungrimPhoto" className={imageClasses} />
+                <img
+                  src={jungrimPhoto}
+                  alt="jungrimPhoto"
+                  className={imageClasses}
+                />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Treasurer | Secretary
                 <br />
-                <small className={classes.smallTitle}>Jungrim &apos;Victoria&apos; Yea</small>
+                <small className={classes.smallTitle}>
+                  Jungrim &apos;Victoria&apos; Yea
+                </small>
               </h4>
               {/* <CardBody>
                 <p className={classes.description}>
@@ -67,7 +77,11 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                <img src={matthewPhoto} alt="matthewPhoto" className={imageClasses} />
+                <img
+                  src={matthewPhoto}
+                  alt="matthewPhoto"
+                  className={imageClasses}
+                />
               </GridItem>
               <h4 className={classes.cardTitle}>
                 Director
@@ -96,7 +110,9 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Education Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Haleema &apos;Halee&apos; Tahseen</small>
+                <small className={classes.smallTitle}>
+                  Haleema &apos;Halee&apos; Tahseen
+                </small>
               </h4>
             </Card>
           </GridItem>
@@ -139,6 +155,15 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
+                Education Assistant (Volunteer)
+                <br />
+                <small className={classes.smallTitle}>Tanishi Jain</small>
+              </h4>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <h4 className={classes.cardTitle}>
                 Math Teacher Assistant (Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Caleb Heaslip</small>
@@ -159,7 +184,9 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Staff Assistant (Volunteer)
                 <br />
-                <small className={classes.smallTitle}>Sushmita &apos;Sonia&apos; Chatterji</small>
+                <small className={classes.smallTitle}>
+                  Sushmita &apos;Sonia&apos; Chatterji
+                </small>
               </h4>
             </Card>
           </GridItem>
