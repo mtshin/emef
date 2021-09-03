@@ -146,7 +146,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Education Assistant (Volunteer)
+                Education Assistant (Lead Volunteer)
                 <br />
                 <small className={classes.smallTitle}>Peter James</small>
               </h4>
@@ -191,7 +191,7 @@ export default function TeamSection() {
           <GridItem xs={12} sm={12} md={4}>
             <Card plain>
               <h4 className={classes.cardTitle}>
-                Staff Assistant (Volunteer)
+                Staff Assistant (Lead Volunteer)
                 <br />
                 <small className={classes.smallTitle}>
                   Sushmita &apos;Sonia&apos; Chatterji
