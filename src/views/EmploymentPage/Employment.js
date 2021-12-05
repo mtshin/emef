@@ -63,10 +63,20 @@ export default function Employment(props) {
                   301-1009, Hyundai 3rd Apartment
                   <br />
                   Jayang Dong, Gwangjin-gu, Seoul, South Korea
+                </h4>
+                <h4 className={classes.description}>
+                  1221-1504
                   <br />
-                  <a href="mailto:emef@teachers.org">emef@teachers.org</a>
+                  284 Haan-ro, Gwangmyeong-si, Gyeonggi-do
                   <br />
-                  <a href="tel:013-0534-2477">Tel: 013-0534-2477</a>
+                  14306, Republic of Korea
+                </h4>
+                <h4 className={classes.description}>
+                  #301
+                  <br />
+                  32, Jayangbeonyeong-ro 4-gil, Gwangjin-gu
+                  <br />
+                  Seoul, 05098, Republic of Korea
                 </h4>
               </GridItem>
             </GridContainer>
