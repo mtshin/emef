@@ -62,21 +62,17 @@ export default function Employment(props) {
                 <h4 className={classes.description}>
                   301-1009, Hyundai 3rd Apartment
                   <br />
-                  Jayang Dong, Gwangjin-gu, Seoul, South Korea
+                  Jayang Dong, Gwangjin-gu, Seoul, Republic of Korea
                 </h4>
                 <h4 className={classes.description}>
                   1221-1504
                   <br />
-                  284 Haan-ro, Gwangmyeong-si, Gyeonggi-do
-                  <br />
-                  14306, Republic of Korea
+                  284 Haan-ro, Gwangmyeong-si, Gyeonggi-do, 14306, Republic of Korea
                 </h4>
                 <h4 className={classes.description}>
                   #301
                   <br />
-                  32, Jayangbeonyeong-ro 4-gil, Gwangjin-gu
-                  <br />
-                  Seoul, 05098, Republic of Korea
+                  32, Jayangbeonyeong-ro 4-gil, Gwangjin-gu, Seoul, 05098, Republic of Korea
                 </h4>
               </GridItem>
             </GridContainer>
