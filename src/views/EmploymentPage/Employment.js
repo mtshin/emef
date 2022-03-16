@@ -18,17 +18,7 @@ import styles from "assets/jss/material-kit-react/views/galleryPage.js";
 
 // core components
 
-
-
-
-
-
-
-
 // Sections for this page
-
-
-
 
 const useStyles = makeStyles(styles);
 
@@ -44,7 +34,7 @@ export default function Employment(props) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -56,23 +46,24 @@ export default function Employment(props) {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Liaison Offices</h2>
-                <h3 className={classes.description}>
-                  Asia
-                </h3>
+                <h3 className={classes.description}>North America</h3>
                 <h4 className={classes.description}>
-                  301-1009, Hyundai 3rd Apartment
+                  98 Myrtle St.
                   <br />
-                  Jayang Dong, Gwangjin-gu, Seoul, Republic of Korea
+                  Rockland, MA 02370
                 </h4>
+                <h3 className={classes.description}>Asia</h3>
                 <h4 className={classes.description}>
                   1221-1504
                   <br />
-                  284 Haan-ro, Gwangmyeong-si, Gyeonggi-do, 14306, Republic of Korea
+                  284 Haan-ro, Gwangmyeong-si, Gyeonggi-do, 14306, Republic of
+                  Korea
                 </h4>
                 <h4 className={classes.description}>
                   #301
                   <br />
-                  32, Jayangbeonyeong-ro 4-gil, Gwangjin-gu, Seoul, 05098, Republic of Korea
+                  32, Jayangbeonyeong-ro 4-gil, Gwangjin-gu, Seoul, 05098,
+                  Republic of Korea
                 </h4>
               </GridItem>
             </GridContainer>
@@ -82,9 +73,12 @@ export default function Employment(props) {
               <GridItem xs={12} sm={12} md={8}>
                 <h2 className={classes.title}>Employment</h2>
                 <h4 className={classes.description}>
-                  Interested in working with us? We welcome those who share our values to reach out to us. Please forward all
-                  inquiries with your resume/CV to <a href="mailto:emef900@gmail.com">emef900@gmail.com</a> or{" "}
-                  <a href="mailto:emef900@teachers.org">emef900@teachers.org</a>. We look forward to hearing from you!
+                  Interested in working with us? We welcome those who share our
+                  values to reach out to us. Please forward all inquiries with
+                  your resume/CV to{" "}
+                  <a href="mailto:emef900@gmail.com">emef900@gmail.com</a> or{" "}
+                  <a href="mailto:emef900@teachers.org">emef900@teachers.org</a>
+                  . We look forward to hearing from you!
                 </h4>
               </GridItem>
             </GridContainer>
@@ -95,12 +89,14 @@ export default function Employment(props) {
                 <h2 className={classes.title}>EAS Opportunities</h2>
                 <h3 className={classes.title}>- Art Teacher -</h3>
                 <h5 className={classes.description}>
-                  Part-time opportunity. BFA or related field required. MTEL preferred but not required.
+                  Part-time opportunity. BFA or related field required. MTEL
+                  preferred but not required.
                 </h5>
                 <h3 className={classes.title}>- Art Intern/Volunteer -</h3>
                 <h5 className={classes.description}>
-                  Paid internship or volunteer opportunity preferrably for students pursuing a BFA. Learn under the
-                  mentorship of Jungrim &quot;Victoria&quot; Yea (MFA, EAS Art Instructor).
+                  Paid internship or volunteer opportunity preferrably for
+                  students pursuing a BFA. Learn under the mentorship of Jungrim
+                  &quot;Victoria&quot; Yea (MFA, EAS Art Instructor).
                 </h5>
               </GridItem>
             </GridContainer>
@@ -111,13 +107,17 @@ export default function Employment(props) {
                 <h2 className={classes.title}>EAMCS Opportunities</h2>
                 <h3 className={classes.title}>- Math/SAT/CS Teacher -</h3>
                 <h5 className={classes.description}>
-                  Part-time opportunity with the option to work remotely or onsite. BS in Math, Computer Science or related
-                  field required. MTEL preferred but not required.
+                  Part-time opportunity with the option to work remotely or
+                  onsite. BS in Math, Computer Science or related field
+                  required. MTEL preferred but not required.
                 </h5>
-                <h3 className={classes.title}>- Math/SAT/CS Intern/Volunteer -</h3>
+                <h3 className={classes.title}>
+                  - Math/SAT/CS Intern/Volunteer -
+                </h3>
                 <h5 className={classes.description}>
-                  Paid internship or volunteer opportunity with the option to work remotely or onsite. Preferrably for
-                  students pursuing a BS in Math, Computer Science, or Education in these fields.
+                  Paid internship or volunteer opportunity with the option to
+                  work remotely or onsite. Preferrably for students pursuing a
+                  BS in Math, Computer Science, or Education in these fields.
                 </h5>
               </GridItem>
             </GridContainer>
