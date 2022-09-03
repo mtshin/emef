@@ -3,15 +3,16 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ["react"],
-  extends: ["eslint:recommended", "plugin:react/recommended"]
+  extends: ["eslint:recommended", "plugin:react/recommended"],
+  "react/no-unknown-property": [0],
 };
