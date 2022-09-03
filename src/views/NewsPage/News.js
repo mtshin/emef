@@ -52,6 +52,31 @@ export default function News(props) {
                 </GridItem>
               </GridContainer>
               <NewsPost
+                title={"Early Childhood Credential Certified"}
+                description={
+                  <h4 className={classes.description}>
+                    A crowning achievement by our talented Jungrim
+                    &apos;Victoria&apos; Yea for earning the{" "}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://amshq.org/"
+                    >
+                      American Montessori Society&apos;s
+                    </a>{" "}
+                    Early Childhood Credential certification! This is a
+                    testament to her passion and inspirational work ethic. We
+                    are so proud and blessed to have a true educator who seeks
+                    to expand her skillset, thereby maximizing impact to more
+                    students!
+                  </h4>
+                }
+                imageSrc={
+                  "https://lh3.google.com/u/0/d/1f-wExwfdnzZ9VEa0viZcwcs2CaFTfqxD=w2160-h3625-iv1"
+                }
+                date={"9/2/2022"}
+              />
+              <NewsPost
                 title={"Community Champions"}
                 description={
                   <h4 className={classes.description}>
@@ -75,7 +100,7 @@ export default function News(props) {
                 date={"6/11/2021"}
               />
               <NewsPost
-                title={"Ten Years!"}
+                title={"Ten Years"}
                 description={
                   <h4 className={classes.description}>
                     We celebrate EMEF CEO & President, Jeho &apos;Daniel&apos;
