@@ -14,5 +14,7 @@ module.exports = {
   },
   plugins: ["react"],
   extends: ["eslint:recommended", "plugin:react/recommended"],
-  "react/no-unknown-property": [0],
+  rules: {
+    "react/no-unknown-property": "warn",
+  },
 };
