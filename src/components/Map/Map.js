@@ -59,14 +59,14 @@ export default function SectionMap() {
               <p>
                 <b>EMEF</b>
                 <br />
-                379 Liberty St. STE 201A & 201C
+                98 Myrtle St. STE201B
                 <br />
                 Rockland, MA 02370
                 <br />
                 (617) 454-4347
                 <br />
                 <a
-                  href="https://www.google.com/maps/place/379+Liberty+St,+Rockland,+MA+02370/@42.1337484,-70.9106487,17z/data=!3m1!4b1!4m5!3m4!1s0x89e49c2a6da9fc39:0xcf481db4c1cc7292!8m2!3d42.1337444!4d-70.90846"
+                  href="https://www.google.com/maps/place/98+Myrtle+St,+Rockland,+MA+02370/@42.1362377,-70.9169987,17z/data=!3m1!4b1!4m5!3m4!1s0x89e49c2cc1b17c03:0x8ab5849270017ea3!8m2!3d42.1362377!4d-70.91481"
                   rel="noopener noreferrer"
                   target="_blank"
                 >

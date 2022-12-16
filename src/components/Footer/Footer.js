@@ -28,7 +28,7 @@ export default function Footer(props) {
       <div className={classes.container}>
         <b>&copy; {1900 + new Date().getYear()} Evergreen Mission and Education Foundation 2016 INC.</b>
         <br />
-        379 Liberty St. STE 201A & 201C <br />
+        98 Myrtle St. STE201B <br />
         Rockland, MA 02370
         <br />
         <a href="tel:617-454-4347">(617) 454-4347</a>
