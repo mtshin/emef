@@ -52,6 +52,20 @@ export default function News(props) {
                 </GridItem>
               </GridContainer>
               <NewsPost
+                title={"Christmas Ornament Making Event"}
+                description={
+                  <h4 className={classes.description}>
+                    We had a great time making Christmas Ornaments for the
+                    holidays with children in our community! Special thanks to
+                    Harvard/MIT COOP for the sponsorship.
+                  </h4>
+                }
+                imageSrc={
+                  "https://lh3.google.com/u/0/d/1_w0aWDZVHTxtx2kTe5V4wxC8P6C6WySh=w1920-h1906-iv1"
+                }
+                date={"12/9/2023"}
+              />
+              <NewsPost
                 title={"Early Childhood Credential Certified"}
                 description={
                   <h4 className={classes.description}>
